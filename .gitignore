@@ -1,0 +1,7 @@
+*.tif
+*.tiff
+*.jpg
+*.png
+*.pth
+
+NUTMGS/tifs_for_labeling
