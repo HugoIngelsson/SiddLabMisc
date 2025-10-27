@@ -1,0 +1,45 @@
+{
+  "species_id": 24,
+  "species_name": "Azadirachta indica",
+  "num_samples": 1126,
+  "support": 354,
+  "positive_ratio": 0.3143872022628784,
+  "accuracy": 0.31438721136767317,
+  "precision": 0.31438721136767317,
+  "recall": 1.0,
+  "f1": 0.4783783783783784,
+  "roc_auc": 0.5,
+  "average_precision": 0.31438721136767317,
+  "true_positives": 354,
+  "false_positives": 772,
+  "true_negatives": 0,
+  "false_negatives": 0,
+  "specificity": 0.0,
+  "positive_class_avg_confidence": 0.547447144985199,
+  "positive_class_std_confidence": 0.0,
+  "negative_class_avg_confidence": 0.547447144985199,
+  "negative_class_std_confidence": 0.0,
+  "false_positive_avg_confidence": 0.547447144985199,
+  "false_positive_examples": [
+    {
+      "pixel_id": "Nagaur_0_2_center",
+      "confidence": 0.547447144985199
+    },
+    {
+      "pixel_id": "Jhunjhunu_0_201_southeast",
+      "confidence": 0.547447144985199
+    },
+    {
+      "pixel_id": "Jhunjhunu_0_204_east",
+      "confidence": 0.547447144985199
+    },
+    {
+      "pixel_id": "Jhunjhunu_0_335_south",
+      "confidence": 0.547447144985199
+    },
+    {
+      "pixel_id": "Jaipur_0_369_east",
+      "confidence": 0.547447144985199
+    }
+  ]
+}

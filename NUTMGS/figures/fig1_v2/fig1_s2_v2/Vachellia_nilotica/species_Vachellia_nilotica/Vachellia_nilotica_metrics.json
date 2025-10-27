@@ -1,0 +1,68 @@
+{
+  "species_id": 177,
+  "species_name": "Vachellia nilotica",
+  "num_samples": 1465,
+  "support": 333,
+  "positive_ratio": 0.22730375826358795,
+  "accuracy": 0.7296928327645051,
+  "precision": 0.43636363636363634,
+  "recall": 0.6486486486486487,
+  "f1": 0.5217391304347826,
+  "roc_auc": 0.7649301244707605,
+  "average_precision": 0.522082774178128,
+  "true_positives": 216,
+  "false_positives": 279,
+  "true_negatives": 853,
+  "false_negatives": 117,
+  "specificity": 0.7535335689045937,
+  "positive_class_avg_confidence": 0.5911389589309692,
+  "positive_class_std_confidence": 0.28451478481292725,
+  "negative_class_avg_confidence": 0.30918803811073303,
+  "negative_class_std_confidence": 0.2600548565387726,
+  "false_positive_avg_confidence": 0.6979227662086487,
+  "false_positive_examples": [
+    {
+      "pixel_id": "Nagaur_1_466_southwest",
+      "confidence": 0.5562708377838135
+    },
+    {
+      "pixel_id": "Jhunjhunu_2_166_southwest",
+      "confidence": 0.7724378108978271
+    },
+    {
+      "pixel_id": "Jhunjhunu_3_215_north",
+      "confidence": 0.7967401146888733
+    },
+    {
+      "pixel_id": "Nagaur_3_236_center",
+      "confidence": 0.5608723759651184
+    },
+    {
+      "pixel_id": "Nagaur_4_435_southeast",
+      "confidence": 0.9623805284500122
+    }
+  ],
+  "false_negative_avg_confidence": 0.24565400183200836,
+  "false_negative_examples": [
+    {
+      "pixel_id": "Jaipur_2_106_southwest",
+      "confidence": 0.45445516705513
+    },
+    {
+      "pixel_id": "Jhunjhunu_2_115_northwest",
+      "confidence": 0.3913291394710541
+    },
+    {
+      "pixel_id": "Jaipur_2_457_southeast",
+      "confidence": 0.06334425508975983
+    },
+    {
+      "pixel_id": "Jaipur_4_51_south",
+      "confidence": 0.2983219623565674
+    },
+    {
+      "pixel_id": "Jaipur_5_271_southeast",
+      "confidence": 0.008219326846301556
+    }
+  ]
+}

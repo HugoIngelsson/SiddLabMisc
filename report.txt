@@ -1,0 +1,60 @@
+"Dharwad": {
+    "images_captured": 1108
+},
+"Gadag": {
+    "images_captured": 199
+},
+"Uttara Kannada": {
+    "images_captured": 12
+},
+"Bengaluru Rural": {
+    "images_captured": 0
+},
+"Bengaluru South": {
+    "images_captured": 244
+},
+"Chikkaballapura": {
+    "images_captured": 1061
+},
+"Chitradurga": {
+    "images_captured": 377
+},
+"Davanagere": {
+    "images_captured": 839
+},
+"Kolar": {
+    "images_captured": 651
+},
+"Shimoga": {
+    "images_captured": 816
+},
+"Tumakuru": {
+    "images_captured": 214
+},
+"Ballari": {
+    "images_captured": 396
+},
+"Koppal": {
+    "images_captured": 18
+},
+"Raichur": {
+    "images_captured": 25
+},
+"Vijayanagara": {
+    "images_captured": 331
+},
+"Dakshina Kannada": {
+    "images_captured": 398
+},
+"Hassan": {
+    "images_captured": 179
+},
+"Kodagu": {
+    "images_captured": 0
+    },
+"Mandya": {
+    "images_captured": 261
+},
+"Udupi": {
+    "images_captured": 144
+}

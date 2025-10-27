@@ -1,0 +1,2 @@
+## For verification of rajasthan_extra, I removed these indices on CVAT (RajasthanTreesExtra):
+ - 977, 963, 904, 650, 307

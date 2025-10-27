@@ -1,0 +1,82 @@
+{
+  "timestamp": "2025-05-26T15:25:30.826344",
+  "stats": {
+    "total_points": 21301,
+    "with_gsv": 17275,
+    "with_tree_cover": 4840,
+    "with_valid_sentinel": 3683,
+    "with_visible_trees": 3683,
+    "images_captured": 7380
+  },
+  "region_stats": {
+    "Ajmer": {
+      "images_captured": 20
+    },
+    "Nagaur": {
+      "images_captured": 292
+    },
+    "Alwar": {
+      "images_captured": 104
+    },
+    "Sikar": {
+      "images_captured": 3001
+    },
+    "Bundi": {
+      "images_captured": 12
+    },
+    "Pali": {
+      "images_captured": 400
+    },
+    "Jaipur": {
+      "images_captured": 1903
+    },
+    "Jhunjhunu": {
+      "images_captured": 1648
+    },
+    "Jodhpur": {
+      "images_captured": 0
+    },
+    "Barmer": {
+      "images_captured": 0
+    },
+    "Bharatpur": {
+      "images_captured": 0
+    },
+    "Jaisalmer": {
+      "images_captured": 0
+    },
+    "Kota": {
+      "images_captured": 0
+    }
+  },
+  "category_stats": {
+    "high_density_near": 9,
+    "high_density_far": 0,
+    "low_density_near": 5422,
+    "low_density_far": 1949
+  },
+  "completed_regions": [
+    "Sikar"
+  ],
+  "metadata_counts": {
+    "locations": 3683,
+    "trees": 7380,
+    "sentinel_pixels": 7201
+  },
+  "settings": {
+    "min_tree_cover": 10,
+    "tree_buffer_radius": 15,
+    "max_tree_count": 8,
+    "max_threads": 12,
+    "target_images_per_region": 3000,
+    "skysat_filtering": true,
+    "farmland_threshold": 20,
+    "using_trained_model": true,
+    "tif_directory": "/app/DATA/Rajasthan_Zones_v4",
+    "distance_threshold": 10
+  },
+  "sampling_stats": {
+    "total_sampled_points": 21310,
+    "processed_locations": 21301
+  }
+}

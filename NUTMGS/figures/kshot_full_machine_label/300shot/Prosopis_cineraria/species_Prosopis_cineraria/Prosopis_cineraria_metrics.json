@@ -1,0 +1,68 @@
+{
+  "species_id": 147,
+  "species_name": "Prosopis cineraria",
+  "num_samples": 1126,
+  "support": 122,
+  "positive_ratio": 0.10834813863039017,
+  "accuracy": 0.47513321492007105,
+  "precision": 0.13530326594090203,
+  "recall": 0.7131147540983607,
+  "f1": 0.22745098039215686,
+  "roc_auc": 0.625502090000653,
+  "average_precision": 0.18499166250652738,
+  "true_positives": 87,
+  "false_positives": 556,
+  "true_negatives": 448,
+  "false_negatives": 35,
+  "specificity": 0.44621513944223107,
+  "positive_class_avg_confidence": 0.5511645674705505,
+  "positive_class_std_confidence": 0.12880359590053558,
+  "negative_class_avg_confidence": 0.5001925826072693,
+  "negative_class_std_confidence": 0.12939831614494324,
+  "false_positive_avg_confidence": 0.5857380032539368,
+  "false_positive_examples": [
+    {
+      "pixel_id": "Nagaur_0_2_center",
+      "confidence": 0.548473060131073
+    },
+    {
+      "pixel_id": "Alwar_0_118_southeast",
+      "confidence": 0.5086438655853271
+    },
+    {
+      "pixel_id": "Pali_0_117_southwest",
+      "confidence": 0.5200080871582031
+    },
+    {
+      "pixel_id": "Jhunjhunu_0_201_southeast",
+      "confidence": 0.6434052586555481
+    },
+    {
+      "pixel_id": "Jhunjhunu_0_204_east",
+      "confidence": 0.5180578827857971
+    }
+  ],
+  "false_negative_avg_confidence": 0.39576929807662964,
+  "false_negative_examples": [
+    {
+      "pixel_id": "Jaipur_26_181_northwest",
+      "confidence": 0.2685699164867401
+    },
+    {
+      "pixel_id": "Jaipur_54_13_southeast",
+      "confidence": 0.4085860252380371
+    },
+    {
+      "pixel_id": "Jhunjhunu_111_8_northeast",
+      "confidence": 0.4253160059452057
+    },
+    {
+      "pixel_id": "Sikar_0_303_north",
+      "confidence": 0.37107351422309875
+    },
+    {
+      "pixel_id": "Sikar_1_146_south",
+      "confidence": 0.48772940039634705
+    }
+  ]
+}

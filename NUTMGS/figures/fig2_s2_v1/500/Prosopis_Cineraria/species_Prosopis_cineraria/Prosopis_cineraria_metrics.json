@@ -1,0 +1,68 @@
+{
+  "species_id": 147,
+  "species_name": "Prosopis cineraria",
+  "num_samples": 869,
+  "support": 91,
+  "positive_ratio": 0.10471806675195694,
+  "accuracy": 0.7514384349827388,
+  "precision": 0.24489795918367346,
+  "recall": 0.6593406593406593,
+  "f1": 0.35714285714285715,
+  "roc_auc": 0.7694073278906184,
+  "average_precision": 0.2721986504167973,
+  "true_positives": 60,
+  "false_positives": 185,
+  "true_negatives": 593,
+  "false_negatives": 31,
+  "specificity": 0.7622107969151671,
+  "positive_class_avg_confidence": 0.5326489210128784,
+  "positive_class_std_confidence": 0.14356407523155212,
+  "negative_class_avg_confidence": 0.3704877197742462,
+  "negative_class_std_confidence": 0.17068874835968018,
+  "false_positive_avg_confidence": 0.5951322913169861,
+  "false_positive_examples": [
+    {
+      "pixel_id": "Sikar_0_185_northwest",
+      "confidence": 0.5477874875068665
+    },
+    {
+      "pixel_id": "Sikar_0_320_east",
+      "confidence": 0.7592673897743225
+    },
+    {
+      "pixel_id": "Sikar_3_288_northwest",
+      "confidence": 0.5593458414077759
+    },
+    {
+      "pixel_id": "Sikar_4_8_east",
+      "confidence": 0.676745593547821
+    },
+    {
+      "pixel_id": "Sikar_4_120_southeast",
+      "confidence": 0.6198797225952148
+    }
+  ],
+  "false_negative_avg_confidence": 0.3822273910045624,
+  "false_negative_examples": [
+    {
+      "pixel_id": "Barmer_2_108_west",
+      "confidence": 0.40561309456825256
+    },
+    {
+      "pixel_id": "Barmer_3_104_northwest",
+      "confidence": 0.422384649515152
+    },
+    {
+      "pixel_id": "Barmer_7_55_east",
+      "confidence": 0.3051997423171997
+    },
+    {
+      "pixel_id": "Barmer_10_70_northwest",
+      "confidence": 0.4308990240097046
+    },
+    {
+      "pixel_id": "Barmer_31_32_southeast",
+      "confidence": 0.46988463401794434
+    }
+  ]
+}

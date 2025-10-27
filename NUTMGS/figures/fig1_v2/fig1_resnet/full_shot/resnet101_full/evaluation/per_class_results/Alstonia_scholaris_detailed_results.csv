@@ -1,0 +1,2 @@
+sample_index,filename,true_label,predicted_label,correct,confidence,true_class_probability,predicted_class_probability
+217,tree_Jaipur_Jaipur_40_21_low_density_near_north_0_20250526_100618_064379.jpg,12,193,False,0.3310188055038452,0.005913041532039642,0.3310188055038452

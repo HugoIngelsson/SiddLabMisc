@@ -1,0 +1,68 @@
+{
+  "species_id": 193,
+  "species_name": "Ailanthus excelsa",
+  "num_samples": 1126,
+  "support": 121,
+  "positive_ratio": 0.10746003687381744,
+  "accuracy": 0.4733570159857904,
+  "precision": 0.15597667638483964,
+  "recall": 0.8842975206611571,
+  "f1": 0.265179677819083,
+  "roc_auc": 0.7018790345791702,
+  "average_precision": 0.18709444291968857,
+  "true_positives": 107,
+  "false_positives": 579,
+  "true_negatives": 426,
+  "false_negatives": 14,
+  "specificity": 0.42388059701492536,
+  "positive_class_avg_confidence": 0.6107763648033142,
+  "positive_class_std_confidence": 0.1031116470694542,
+  "negative_class_avg_confidence": 0.5242568850517273,
+  "negative_class_std_confidence": 0.13145853579044342,
+  "false_positive_avg_confidence": 0.616796612739563,
+  "false_positive_examples": [
+    {
+      "pixel_id": "Nagaur_0_2_center",
+      "confidence": 0.5311447978019714
+    },
+    {
+      "pixel_id": "Alwar_0_118_southeast",
+      "confidence": 0.6498473882675171
+    },
+    {
+      "pixel_id": "Jhunjhunu_0_201_southeast",
+      "confidence": 0.7041162848472595
+    },
+    {
+      "pixel_id": "Jhunjhunu_0_204_east",
+      "confidence": 0.6246232390403748
+    },
+    {
+      "pixel_id": "Jhunjhunu_0_335_south",
+      "confidence": 0.6293171644210815
+    }
+  ],
+  "false_negative_avg_confidence": 0.40536603331565857,
+  "false_negative_examples": [
+    {
+      "pixel_id": "Jhunjhunu_7_71_east",
+      "confidence": 0.49884289503097534
+    },
+    {
+      "pixel_id": "Jhunjhunu_14_135_west",
+      "confidence": 0.33705654740333557
+    },
+    {
+      "pixel_id": "Sikar_14_280_north",
+      "confidence": 0.39543217420578003
+    },
+    {
+      "pixel_id": "Jaipur_46_57_northwest",
+      "confidence": 0.47040456533432007
+    },
+    {
+      "pixel_id": "Sikar_1_107_west",
+      "confidence": 0.49572986364364624
+    }
+  ]
+}

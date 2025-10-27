@@ -1,0 +1,27 @@
+,class_id,total_samples,errors,error_rate,accuracy
+Acalypha fruticosa,0.0,3.0,3.0,1.0,0.0
+Albizia lebbeck,7.0,5.0,4.0,0.8,0.19999999999999996
+Albizia procera,9.0,8.0,8.0,1.0,0.0
+Alstonia scholaris,12.0,1.0,1.0,1.0,0.0
+Azadirachta indica,23.0,251.0,79.0,0.3147410358565737,0.6852589641434264
+Cassia fistula,54.0,1.0,0.0,0.0,1.0
+Cordia myxa,65.0,2.0,2.0,1.0,0.0
+Dalbergia sissoo,72.0,27.0,25.0,0.9259259259259259,0.07407407407407407
+Ficus benghalensis,86.0,12.0,12.0,1.0,0.0
+Ficus religiosa,93.0,11.0,11.0,1.0,0.0
+Mangifera indica,123.0,10.0,10.0,1.0,0.0
+Moringa oleifera,129.0,8.0,8.0,1.0,0.0
+Phoenix sylvestris,137.0,4.0,4.0,1.0,0.0
+Pongamia pinnata,144.0,13.0,9.0,0.6923076923076923,0.3076923076923077
+Prosopis cineraria,146.0,91.0,39.0,0.42857142857142855,0.5714285714285714
+Prosopis farcta,147.0,1.0,1.0,1.0,0.0
+Vachellia leucophloea,175.0,5.0,5.0,1.0,0.0
+Vachellia nilotica,176.0,190.0,47.0,0.24736842105263157,0.7526315789473684
+Ziziphus jujuba,180.0,8.0,8.0,1.0,0.0
+Ziziphus mauritiana,181.0,2.0,2.0,1.0,0.0
+Aegle Marmelos,189.0,11.0,7.0,0.6363636363636364,0.36363636363636365
+Morus Alba,190.0,21.0,12.0,0.5714285714285714,0.4285714285714286
+Ailanthus excelsa,192.0,99.0,34.0,0.3434343434343434,0.6565656565656566
+saraca asoca,193.0,29.0,13.0,0.4482758620689655,0.5517241379310345
+prosopis juliflora,194.0,39.0,13.0,0.3333333333333333,0.6666666666666667
+Eucalyptus tereticornis,195.0,3.0,3.0,1.0,0.0

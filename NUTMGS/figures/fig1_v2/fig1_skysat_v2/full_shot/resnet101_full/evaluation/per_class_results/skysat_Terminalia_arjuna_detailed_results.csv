@@ -1,0 +1,2 @@
+sample_index,skysat_filename,true_label,predicted_label,correct,confidence,true_class_probability,predicted_class_probability
+286,tree_Jhunjhunu_Jhunjhunu_97_46_low_density_near_center_0_20250526_123250_009361_skysat.jpg,168,146,False,0.25332480669021606,3.7739773688372225e-05,0.25332480669021606

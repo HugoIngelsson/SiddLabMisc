@@ -1,0 +1,155 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Bold;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red193\green193\blue193;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c80000\c80000\c80000;}
+\margl1440\margr1440\vieww25000\viewh12980\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 AGGREGGATE (FIGURE 1)
+\f1\b0 \
+ROC AUC\
+       Modality Azadirachta indica Vachellia nilotica Ailanthus excelsa  \\\
+0        SkySat           0.574925           0.605584          0.543965   \
+1     Sentinel2           0.679038                0.5          0.764794   \
+2  BIO-CLIP GSV           0.817287           0.904424          0.929046   \
+3  (ResNet GSV)           0.827834           0.884836          0.941305   \
+\
+  Prosopis cineraria prosopis juliflora  \
+0           0.663505           0.662299  \
+1            0.77808           0.861173  \
+2           0.896784           0.970337  \
+3           0.867096           0.953557  \
+\
+\
+AUPRC\
+                Modality Azadirachta indica Vachellia nilotica  \\\
+0  Fraction of Positives           0.293567           0.222222   \
+1                 SkySat           0.371341           0.301546   \
+2              Sentinel2           0.453567            0.23015   \
+3           BIO-CLIP GSV           0.718092            0.78853   \
+4           (ResNet GSV)           0.708198           0.770968   \
+\
+  Ailanthus excelsa Prosopis cineraria prosopis juliflora  \
+0          0.115789           0.106433           0.045614  \
+1          0.126902           0.180524           0.105844  \
+2          0.291568           0.296386           0.241187  \
+3          0.743235           0.646401           0.713645  \
+4          0.738128           0.494139           0.677297  \
+\
+\
+Accuracy\
+       Modality Azadirachta indica Vachellia nilotica Ailanthus excelsa  \\\
+0        SkySat           0.377778           0.733333          0.884211   \
+1     Sentinel2           0.647871            0.23015           0.70771   \
+2  BIO-CLIP GSV           0.818713           0.878363           0.94269   \
+3  (ResNet GSV)           0.777778           0.842105          0.915789   \
+\
+  Prosopis cineraria prosopis juliflora  \
+0           0.893567           0.954386  \
+1           0.788262           0.875719  \
+2           0.921637           0.968421  \
+3           0.892398           0.966082 \
+\
+
+\f0\b SENTINEL 2 (BY SHOT #)\
+
+\f1\b0 ROC AUC
+\f0\b \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0 \cf2               Species       100       200       300       400       500  \\\
+0  Azadirachta indica   0.60796  0.627065  0.679981  0.692961  0.709115   \
+1  Vachellia nilotica  0.599716  0.672257  0.670605  0.689148  0.699088   \
+2   Ailanthus excelsa  0.691516  0.723014  0.725754  0.742647  0.747448   \
+3  Prosopis cineraria  0.659023  0.711454  0.757514  0.764464  0.769407   \
+\
+        600       700  \
+0  0.733814  0.719349  \
+1  0.707063  0.735927  \
+2  0.742722  0.754022  \
+3  0.758418  0.758842  \
+\
+AUPRC\
+              Species       100       200       300       400       500  \\\
+0  Azadirachta indica  0.385132  0.402345  0.459246  0.469205  0.481401   \
+1  Vachellia nilotica  0.321888  0.366967  0.384833  0.385811   0.41845   \
+2   Ailanthus excelsa  0.215658   0.25528  0.251075   0.26567  0.275023   \
+3  Prosopis cineraria  0.165622  0.203769  0.248424  0.254996  0.272199   \
+\
+        600       700  \
+0  0.512505  0.489071  \
+1  0.423307  0.460037  \
+2   0.27727  0.281998  \
+3  0.252189  0.257976  \
+\
+\
+Accuracy\
+              Species       100       200       300       400       500  \\\
+0  Azadirachta indica   0.56962  0.567319  0.552359  0.621404  0.640967   \
+1  Vachellia nilotica  0.525892  0.612198  0.597238  0.589183   0.64672   \
+2   Ailanthus excelsa  0.531646  0.593786  0.628308   0.72267  0.693901   \
+3  Prosopis cineraria  0.573072  0.601841  0.697353  0.693901  0.751438   \
+\
+        600       700  \
+0  0.654776  0.578826  \
+1   0.63061  0.678941  \
+2  0.743383  0.712313  \
+3   0.76985  0.792865\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\
+\
+
+\f0\b BIO-CLIP (BY SHOT #)\
+
+\f1\b0 ROC AUC
+\f0\b \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0 \cf2               Species      1000      2000      3000      4000      5000  \\\
+0  Azadirachta indica  0.776412  0.763413  0.802199  0.854817  0.841816   \
+1  Vachellia nilotica  0.846622  0.861521  0.867101  0.883036  0.881883   \
+2   Ailanthus excelsa  0.815739  0.828529  0.858594  0.860966  0.876007   \
+3  Prosopis cineraria  0.779062  0.810436  0.838094  0.845273  0.852823   \
+\
+       6000      7000      8000      9000  \
+0  0.842979  0.846208  0.853486  0.862699  \
+1  0.891522   0.89252  0.893296  0.885001  \
+2  0.874302   0.86497  0.866272  0.898948  \
+3  0.858464  0.863922  0.875295  0.881655  \
+\
+\
+AUPRC\
+              Species      1000      2000      3000      4000      5000  \\\
+0  Azadirachta indica  0.628524   0.62065  0.675534  0.744324  0.731527   \
+1  Vachellia nilotica  0.669803  0.701669  0.716675  0.740129  0.734343   \
+2   Ailanthus excelsa  0.517833  0.524991  0.633318  0.606284  0.667322   \
+3  Prosopis cineraria  0.329057  0.373147  0.484282  0.501658  0.517479   \
+\
+       6000      7000      8000      9000  \
+0  0.738682  0.752621  0.760638  0.772641  \
+1  0.763926   0.76428  0.754516   0.73675  \
+2  0.646542   0.64248  0.628305  0.695582  \
+3  0.526583  0.518361  0.555226  0.561821  \
+\
+\
+Accuracy\
+              Species      1000      2000      3000      4000      5000  \\\
+0  Azadirachta indica  0.782759  0.783621  0.802586  0.815517  0.823276   \
+1  Vachellia nilotica  0.831897  0.846552  0.856897  0.861207  0.867241   \
+2   Ailanthus excelsa  0.900862  0.906034   0.92931     0.925  0.931897   \
+3  Prosopis cineraria  0.877586   0.87069  0.891379  0.893966  0.893103   \
+\
+       6000      7000      8000      9000  \
+0     0.825  0.832759  0.837931  0.850862  \
+1  0.862069  0.857759  0.867241  0.868966  \
+2  0.923276  0.931034  0.928448  0.938793  \
+3  0.893103  0.893966  0.900862  0.906897\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\
+\
+\
+}

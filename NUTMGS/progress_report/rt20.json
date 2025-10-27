@@ -1,0 +1,122 @@
+{
+  "timestamp": "2025-07-16T00:45:06.966326",
+  "stats": {
+    "total_points": 18817,
+    "with_gsv": 10159,
+    "with_tree_cover": 10159,
+    "with_valid_sentinel": 5649,
+    "with_visible_trees": 5649,
+    "images_captured": 9837
+  },
+  "region_stats": {
+    "Nagaur": {
+      "images_captured": 224
+    },
+    "Tonk": {
+      "images_captured": 685
+    },
+    "Bharatpur": {
+      "images_captured": 208
+    },
+    "Deeg": {
+      "images_captured": 237
+    },
+    "Karauli": {
+      "images_captured": 32
+    },
+    "Sawai Madhopur": {
+      "images_captured": 116
+    },
+    "Bikaner": {
+      "images_captured": 558
+    },
+    "Ganganagar": {
+      "images_captured": 0
+    },
+    "Hanumangarh": {
+      "images_captured": 270
+    },
+    "Churu": {
+      "images_captured": 116
+    },
+    "Jaipur": {
+      "images_captured": 1147
+    },
+    "Alwar": {
+      "images_captured": 629
+    },
+    "Dausa": {
+      "images_captured": 507
+    },
+    "Kotputli-Behror": {
+      "images_captured": 77
+    },
+    "Barmer": {
+      "images_captured": 54
+    },
+    "Jaisalmer": {
+      "images_captured": 7
+    },
+    "Phalodi": {
+      "images_captured": 105
+    },
+    "Jodhpur": {
+      "images_captured": 41
+    },
+    "Balotra": {
+      "images_captured": 74
+    },
+    "Jalore": {
+      "images_captured": 460
+    },
+    "Pali": {
+      "images_captured": 1074
+    },
+    "Bundi": {
+      "images_captured": 116
+    },
+    "Kota": {
+      "images_captured": 639
+    },
+    "Udaipur": {
+      "images_captured": 239
+    },
+    "Chittorgarh": {
+      "images_captured": 616
+    },
+    "Bhilwara": {
+      "images_captured": 1577
+    },
+    "Pratapgarh": {
+      "images_captured": 29
+    }
+  },
+  "category_stats": {
+    "high_density_near": 6,
+    "high_density_far": 0,
+    "low_density_near": 7295,
+    "low_density_far": 2536
+  },
+  "completed_regions": [],
+  "metadata_counts": {
+    "locations": 5491,
+    "trees": 10209,
+    "sentinel_pixels": 9947
+  },
+  "settings": {
+    "min_tree_cover": 0,
+    "tree_buffer_radius": 15,
+    "max_tree_count": 8,
+    "max_threads": 12,
+    "target_images_per_region": 20000,
+    "skysat_filtering": true,
+    "farmland_threshold": 80,
+    "using_trained_model": true,
+    "tif_directory": "/app/SpeciesMapping/DATA/rajasthan_top_20_tifs",
+    "distance_threshold": 10
+  },
+  "sampling_stats": {
+    "total_sampled_points": 19065,
+    "processed_locations": 18817
+  }
+}

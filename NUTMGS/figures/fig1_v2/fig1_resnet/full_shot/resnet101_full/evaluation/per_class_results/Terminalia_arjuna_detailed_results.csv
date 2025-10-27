@@ -1,0 +1,2 @@
+sample_index,filename,true_label,predicted_label,correct,confidence,true_class_probability,predicted_class_probability
+286,tree_Jhunjhunu_Jhunjhunu_97_46_low_density_near_center_0_20250526_123250_009361.jpg,168,144,False,0.44498419761657715,0.0016701999120414257,0.44498419761657715

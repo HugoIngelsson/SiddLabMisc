@@ -1,0 +1,2 @@
+sample_index,skysat_filename,true_label,predicted_label,correct,confidence,true_class_probability,predicted_class_probability
+415,tree_Jaipur_Jaipur_5_186_low_density_far_south_0_20250526_064051_374114_skysat.jpg,12,23,False,0.2752799093723297,0.00028454672428779304,0.2752799093723297

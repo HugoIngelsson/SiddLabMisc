@@ -1,0 +1,68 @@
+{
+  "species_id": 195,
+  "species_name": "prosopis juliflora",
+  "num_samples": 869,
+  "support": 40,
+  "positive_ratio": 0.046029917895793915,
+  "accuracy": 0.9159953970080552,
+  "precision": 0.2537313432835821,
+  "recall": 0.425,
+  "f1": 0.31775700934579443,
+  "roc_auc": 0.8477533172496984,
+  "average_precision": 0.20529339761352838,
+  "true_positives": 17,
+  "false_positives": 50,
+  "true_negatives": 779,
+  "false_negatives": 23,
+  "specificity": 0.9396863691194209,
+  "positive_class_avg_confidence": 0.44441214203834534,
+  "positive_class_std_confidence": 0.2501545250415802,
+  "negative_class_avg_confidence": 0.13737216591835022,
+  "negative_class_std_confidence": 0.1755300611257553,
+  "false_positive_avg_confidence": 0.7113159894943237,
+  "false_positive_examples": [
+    {
+      "pixel_id": "Barmer_0_8_south",
+      "confidence": 0.9238773584365845
+    },
+    {
+      "pixel_id": "Barmer_2_57_center",
+      "confidence": 0.6405168771743774
+    },
+    {
+      "pixel_id": "Barmer_2_64_east",
+      "confidence": 0.8879357576370239
+    },
+    {
+      "pixel_id": "Barmer_7_55_east",
+      "confidence": 0.8461387157440186
+    },
+    {
+      "pixel_id": "Barmer_10_70_northwest",
+      "confidence": 0.7375171184539795
+    }
+  ],
+  "false_negative_avg_confidence": 0.2624901235103607,
+  "false_negative_examples": [
+    {
+      "pixel_id": "Barmer_0_56_center",
+      "confidence": 0.4427488148212433
+    },
+    {
+      "pixel_id": "Sikar_48_51_southeast",
+      "confidence": 0.0075749862007796764
+    },
+    {
+      "pixel_id": "Sikar_49_41_east",
+      "confidence": 0.3448783755302429
+    },
+    {
+      "pixel_id": "Sikar_62_0_south",
+      "confidence": 0.09402860701084137
+    },
+    {
+      "pixel_id": "Sikar_91_16_north",
+      "confidence": 0.18118152022361755
+    }
+  ]
+}

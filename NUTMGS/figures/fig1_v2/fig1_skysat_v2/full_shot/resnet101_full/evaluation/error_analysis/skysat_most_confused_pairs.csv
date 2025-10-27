@@ -1,0 +1,11 @@
+true_class,predicted_class,true_class_id,predicted_class_id,count
+Vachellia nilotica,Azadirachta indica,176,23,220
+Ailanthus excelsa,Azadirachta indica,192,23,106
+Prosopis cineraria,Azadirachta indica,146,23,100
+Azadirachta indica,Vachellia nilotica,23,176,79
+prosopis juliflora,Azadirachta indica,194,23,54
+Prosopis cineraria,Vachellia nilotica,146,176,52
+Ailanthus excelsa,Vachellia nilotica,192,176,34
+saraca asoca,Azadirachta indica,193,23,33
+Dalbergia sissoo,Azadirachta indica,72,23,30
+Morus Alba,Azadirachta indica,190,23,29

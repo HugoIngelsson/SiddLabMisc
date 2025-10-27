@@ -1,0 +1,68 @@
+{
+  "species_id": 24,
+  "species_name": "Azadirachta indica",
+  "num_samples": 1160,
+  "support": 344,
+  "positive_ratio": 0.29655173420906067,
+  "accuracy": 0.6801724137931034,
+  "precision": 0.46952595936794583,
+  "recall": 0.6046511627906976,
+  "f1": 0.5285895806861499,
+  "roc_auc": 0.7111690606475147,
+  "average_precision": 0.47908804641211833,
+  "true_positives": 208,
+  "false_positives": 235,
+  "true_negatives": 581,
+  "false_negatives": 136,
+  "specificity": 0.7120098039215687,
+  "positive_class_avg_confidence": 0.5090526342391968,
+  "positive_class_std_confidence": 0.18480192124843597,
+  "negative_class_avg_confidence": 0.357708215713501,
+  "negative_class_std_confidence": 0.19901122152805328,
+  "false_positive_avg_confidence": 0.627147912979126,
+  "false_positive_examples": [
+    {
+      "pixel_id": "Sikar_0_280_center",
+      "confidence": 0.5589390993118286
+    },
+    {
+      "pixel_id": "Sikar_1_349_southwest",
+      "confidence": 0.5694180130958557
+    },
+    {
+      "pixel_id": "Sikar_3_208_northwest",
+      "confidence": 0.7023433446884155
+    },
+    {
+      "pixel_id": "Sikar_3_321_center",
+      "confidence": 0.5261071920394897
+    },
+    {
+      "pixel_id": "Sikar_4_317_northwest",
+      "confidence": 0.5740906000137329
+    }
+  ],
+  "false_negative_avg_confidence": 0.3089146614074707,
+  "false_negative_examples": [
+    {
+      "pixel_id": "Barmer_0_134_northwest",
+      "confidence": 0.1532616913318634
+    },
+    {
+      "pixel_id": "Barmer_0_204_north",
+      "confidence": 0.20503771305084229
+    },
+    {
+      "pixel_id": "Sikar_0_289_northwest",
+      "confidence": 0.28564876317977905
+    },
+    {
+      "pixel_id": "Sikar_3_102_east",
+      "confidence": 0.48082688450813293
+    },
+    {
+      "pixel_id": "Sikar_3_144_northeast",
+      "confidence": 0.31935039162635803
+    }
+  ]
+}

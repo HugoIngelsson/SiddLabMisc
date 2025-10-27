@@ -1,0 +1,47 @@
+{
+  "timestamp": "2025-05-29T03:01:56.834609",
+  "stats": {
+    "total_points": 15174,
+    "with_gsv": 9632,
+    "with_tree_cover": 5174,
+    "with_valid_sentinel": 4270,
+    "with_visible_trees": 4270,
+    "images_captured": 7976
+  },
+  "region_stats": {
+    "Sikar": {
+      "images_captured": 7735
+    },
+    "Barmer": {
+      "images_captured": 241
+    }
+  },
+  "category_stats": {
+    "high_density_near": 0,
+    "high_density_far": 0,
+    "low_density_near": 5799,
+    "low_density_far": 2177
+  },
+  "completed_regions": [],
+  "metadata_counts": {
+    "locations": 4081,
+    "trees": 8694,
+    "sentinel_pixels": 8480
+  },
+  "settings": {
+    "min_tree_cover": 10,
+    "tree_buffer_radius": 15,
+    "max_tree_count": 8,
+    "max_threads": 12,
+    "target_images_per_region": 20000,
+    "skysat_filtering": true,
+    "farmland_threshold": 20,
+    "using_trained_model": true,
+    "tif_directory": "/app/DATA/rajasthan_comprehensive_part_8_tifs",
+    "distance_threshold": 10
+  },
+  "sampling_stats": {
+    "total_sampled_points": 15174,
+    "processed_locations": 15174
+  }
+}

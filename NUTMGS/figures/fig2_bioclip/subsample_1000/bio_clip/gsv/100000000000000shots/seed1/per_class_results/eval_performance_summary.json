@@ -1,0 +1,86 @@
+{
+  "top_10_classes": {
+    "Cassia fistula": {
+      "f1_score": 1.0,
+      "support": 1
+    },
+    "Azadirachta indica": {
+      "f1_score": 0.668421052631579,
+      "support": 344
+    },
+    "Vachellia nilotica": {
+      "f1_score": 0.632768361581921,
+      "support": 257
+    },
+    "Ailanthus excelsa": {
+      "f1_score": 0.555984555984556,
+      "support": 134
+    },
+    "prosopis juliflora": {
+      "f1_score": 0.5544554455445545,
+      "support": 50
+    },
+    "saraca asoca": {
+      "f1_score": 0.5245901639344263,
+      "support": 36
+    },
+    "Phoenix sylvestris": {
+      "f1_score": 0.4444444444444445,
+      "support": 5
+    },
+    "Prosopis cineraria": {
+      "f1_score": 0.432,
+      "support": 134
+    },
+    "Ficus benghalensis": {
+      "f1_score": 0.3846153846153846,
+      "support": 15
+    },
+    "Dalbergia sissoo": {
+      "f1_score": 0.380952380952381,
+      "support": 40
+    }
+  },
+  "bottom_10_classes": {
+    "Limonia acidissima": {
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Grevillea robusta": {
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Leucaena leucocephala": {
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Spathodea campanulata": {
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Samanea saman": {
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Radermachera sinica": {
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Caesalpinia pulcherrima": {
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Prunus dulcis": {
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Areca catechu": {
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Ricinus communis": {
+      "f1_score": 0.0,
+      "support": 0
+    }
+  }
+}

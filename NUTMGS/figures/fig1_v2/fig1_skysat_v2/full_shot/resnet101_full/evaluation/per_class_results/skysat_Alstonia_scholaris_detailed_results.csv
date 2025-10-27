@@ -1,0 +1,2 @@
+sample_index,skysat_filename,true_label,predicted_label,correct,confidence,true_class_probability,predicted_class_probability
+217,tree_Jaipur_Jaipur_40_21_low_density_near_north_0_20250526_100618_064379_skysat.jpg,12,23,False,0.29842182993888855,0.00024517843849025667,0.29842182993888855

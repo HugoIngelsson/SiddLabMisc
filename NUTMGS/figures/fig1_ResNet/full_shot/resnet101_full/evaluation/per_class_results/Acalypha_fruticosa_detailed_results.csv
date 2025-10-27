@@ -1,0 +1,4 @@
+sample_index,filename,true_label,predicted_label,correct,confidence,true_class_probability,predicted_class_probability
+280,tree_Sikar_Sikar_95_27_low_density_near_northwest_0_20250528_194215_280099.jpg,0,146,False,0.7275890707969666,0.0001359521265840158,0.7275890707969666
+500,tree_Jaipur_Jaipur_16_108_low_density_far_east_1_20250526_080301_699475.jpg,0,23,False,0.295606791973114,0.13073022663593292,0.295606791973114
+521,tree_Jhunjhunu_Jhunjhunu_21_57_low_density_near_southeast_0_20250526_083424_088275.jpg,0,146,False,0.9797511696815491,4.395764335640706e-05,0.9797511696815491

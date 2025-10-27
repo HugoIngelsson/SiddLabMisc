@@ -1,0 +1,68 @@
+{
+  "species_id": 193,
+  "species_name": "Ailanthus excelsa",
+  "num_samples": 869,
+  "support": 104,
+  "positive_ratio": 0.11967778950929642,
+  "accuracy": 0.6283084004602992,
+  "precision": 0.2064343163538874,
+  "recall": 0.7403846153846154,
+  "f1": 0.3228511530398323,
+  "roc_auc": 0.7257541478129714,
+  "average_precision": 0.25107516013378495,
+  "true_positives": 77,
+  "false_positives": 296,
+  "true_negatives": 469,
+  "false_negatives": 27,
+  "specificity": 0.6130718954248366,
+  "positive_class_avg_confidence": 0.6107934713363647,
+  "positive_class_std_confidence": 0.2063102275133133,
+  "negative_class_avg_confidence": 0.4127906858921051,
+  "negative_class_std_confidence": 0.248295858502388,
+  "false_positive_avg_confidence": 0.6797897815704346,
+  "false_positive_examples": [
+    {
+      "pixel_id": "Barmer_2_108_west",
+      "confidence": 0.5654029250144958
+    },
+    {
+      "pixel_id": "Barmer_3_104_northwest",
+      "confidence": 0.5514989495277405
+    },
+    {
+      "pixel_id": "Barmer_31_32_southeast",
+      "confidence": 0.5034599900245667
+    },
+    {
+      "pixel_id": "Sikar_0_86_center",
+      "confidence": 0.5438683032989502
+    },
+    {
+      "pixel_id": "Sikar_0_185_northwest",
+      "confidence": 0.7760241031646729
+    }
+  ],
+  "false_negative_avg_confidence": 0.3201514482498169,
+  "false_negative_examples": [
+    {
+      "pixel_id": "Sikar_4_8_east",
+      "confidence": 0.32896003127098083
+    },
+    {
+      "pixel_id": "Sikar_34_119_east",
+      "confidence": 0.38001877069473267
+    },
+    {
+      "pixel_id": "Sikar_57_24_northwest",
+      "confidence": 0.24209001660346985
+    },
+    {
+      "pixel_id": "Sikar_57_26_center",
+      "confidence": 0.3903723955154419
+    },
+    {
+      "pixel_id": "Sikar_65_0_center",
+      "confidence": 0.35089734196662903
+    }
+  ]
+}

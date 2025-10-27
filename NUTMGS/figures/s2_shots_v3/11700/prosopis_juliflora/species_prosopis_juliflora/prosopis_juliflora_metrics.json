@@ -1,0 +1,68 @@
+{
+  "species_id": 195,
+  "species_name": "prosopis juliflora",
+  "num_samples": 1465,
+  "support": 65,
+  "positive_ratio": 0.04436860233545303,
+  "accuracy": 0.9344709897610921,
+  "precision": 0.3368421052631579,
+  "recall": 0.49230769230769234,
+  "f1": 0.4,
+  "roc_auc": 0.8457912087912087,
+  "average_precision": 0.3723166715819487,
+  "true_positives": 32,
+  "false_positives": 63,
+  "true_negatives": 1337,
+  "false_negatives": 33,
+  "specificity": 0.955,
+  "positive_class_avg_confidence": 0.47396034002304077,
+  "positive_class_std_confidence": 0.3716351091861725,
+  "negative_class_avg_confidence": 0.08250658214092255,
+  "negative_class_std_confidence": 0.16381506621837616,
+  "false_positive_avg_confidence": 0.7078301310539246,
+  "false_positive_examples": [
+    {
+      "pixel_id": "Jhunjhunu_0_285_southwest",
+      "confidence": 0.8015189170837402
+    },
+    {
+      "pixel_id": "Jhunjhunu_0_285_west",
+      "confidence": 0.5204184651374817
+    },
+    {
+      "pixel_id": "Nagaur_2_119_west",
+      "confidence": 0.7246053814888
+    },
+    {
+      "pixel_id": "Pali_2_139_southeast",
+      "confidence": 0.9119131565093994
+    },
+    {
+      "pixel_id": "Pali_2_143_west",
+      "confidence": 0.8792269229888916
+    }
+  ],
+  "false_negative_avg_confidence": 0.13132132589817047,
+  "false_negative_examples": [
+    {
+      "pixel_id": "Nagaur_1_466_southwest",
+      "confidence": 0.23185116052627563
+    },
+    {
+      "pixel_id": "Pali_3_487_east",
+      "confidence": 0.2662504315376282
+    },
+    {
+      "pixel_id": "Nagaur_4_371_east",
+      "confidence": 0.3387244939804077
+    },
+    {
+      "pixel_id": "Jhunjhunu_13_114_north",
+      "confidence": 0.01774175837635994
+    },
+    {
+      "pixel_id": "Sikar_48_148_southeast",
+      "confidence": 0.1290092170238495
+    }
+  ]
+}

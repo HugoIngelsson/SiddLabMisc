@@ -1,0 +1,11 @@
+Zone,Accuracy,AUC,AP,Count,Positive Samples
+Total,0.5522184300341297,0.7719299191374662,0.22419420333182577,1465.0,140.0
+Transitional plain zone of Inland drainage,0.28293413173652693,0.6211265052049496,0.23849531232234616,668.0,121.0
+Semi arid eastern plain,0.612,0.5577731092436975,0.16593982024621023,250.0,12.0
+Transitional plain zone of Luni Basin,0.859375,0.3663563829787234,0.019565847075474804,192.0,4.0
+Flood prone eastern plain,0.9615384615384616,0.0,0.0,104.0,0.0
+Sub humid southern plain and alluvial hill,0.8,0.9693486590038314,0.7575757575757576,90.0,3.0
+South eastern humid plain,0.9672131147540983,0.0,0.0,61.0,0.0
+Arid Western Plain and Hyper Arid Partial irrigated,0.49056603773584906,0.0,0.0,53.0,0.0
+Southern humid plain,1.0,0.0,0.0,40.0,0.0
+Irrigated North Western Plain,0.7142857142857143,0.0,0.0,7.0,0.0

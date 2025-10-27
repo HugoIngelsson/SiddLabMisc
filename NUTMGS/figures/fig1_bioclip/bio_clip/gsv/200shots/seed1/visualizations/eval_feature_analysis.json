@@ -1,0 +1,7 @@
+{
+  "intra_class_similarity_mean": 0.7685546875,
+  "intra_class_similarity_std": 0.0762939453125,
+  "inter_class_similarity_mean": 0.7275390625,
+  "inter_class_similarity_std": 0.07000732421875,
+  "feature_separability": 0.041015625
+}

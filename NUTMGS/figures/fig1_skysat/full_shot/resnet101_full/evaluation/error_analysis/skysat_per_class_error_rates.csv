@@ -1,0 +1,27 @@
+,class_id,total_samples,errors,error_rate,accuracy
+Acalypha fruticosa,0.0,3.0,3.0,1.0,0.0
+Albizia lebbeck,7.0,5.0,5.0,1.0,0.0
+Albizia procera,9.0,8.0,8.0,1.0,0.0
+Alstonia scholaris,12.0,1.0,1.0,1.0,0.0
+Azadirachta indica,23.0,251.0,25.0,0.099601593625498,0.900398406374502
+Cassia fistula,54.0,1.0,1.0,1.0,0.0
+Cordia myxa,65.0,2.0,2.0,1.0,0.0
+Dalbergia sissoo,72.0,27.0,27.0,1.0,0.0
+Ficus benghalensis,86.0,12.0,12.0,1.0,0.0
+Ficus religiosa,93.0,11.0,11.0,1.0,0.0
+Mangifera indica,123.0,10.0,10.0,1.0,0.0
+Moringa oleifera,129.0,8.0,8.0,1.0,0.0
+Phoenix sylvestris,137.0,4.0,4.0,1.0,0.0
+Pongamia pinnata,144.0,13.0,13.0,1.0,0.0
+Prosopis cineraria,146.0,91.0,91.0,1.0,0.0
+Prosopis farcta,147.0,1.0,1.0,1.0,0.0
+Vachellia leucophloea,175.0,5.0,5.0,1.0,0.0
+Vachellia nilotica,176.0,190.0,148.0,0.7789473684210526,0.2210526315789474
+Ziziphus jujuba,180.0,8.0,8.0,1.0,0.0
+Ziziphus mauritiana,181.0,2.0,2.0,1.0,0.0
+Aegle Marmelos,189.0,11.0,11.0,1.0,0.0
+Morus Alba,190.0,21.0,21.0,1.0,0.0
+Ailanthus excelsa,192.0,99.0,99.0,1.0,0.0
+saraca asoca,193.0,29.0,29.0,1.0,0.0
+prosopis juliflora,194.0,39.0,39.0,1.0,0.0
+Eucalyptus tereticornis,195.0,3.0,3.0,1.0,0.0

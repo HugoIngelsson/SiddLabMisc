@@ -1,0 +1,68 @@
+{
+  "species_id": 24,
+  "species_name": "Azadirachta indica",
+  "num_samples": 1465,
+  "support": 488,
+  "positive_ratio": 0.33310580253601074,
+  "accuracy": 0.6170648464163823,
+  "precision": 0.44511278195488724,
+  "recall": 0.6065573770491803,
+  "f1": 0.5134431916738942,
+  "roc_auc": 0.6400080960451029,
+  "average_precision": 0.4492132109277328,
+  "true_positives": 296,
+  "false_positives": 369,
+  "true_negatives": 608,
+  "false_negatives": 192,
+  "specificity": 0.6223132036847492,
+  "positive_class_avg_confidence": 0.5216088891029358,
+  "positive_class_std_confidence": 0.09903590381145477,
+  "negative_class_avg_confidence": 0.4760285019874573,
+  "negative_class_std_confidence": 0.09835127741098404,
+  "false_positive_avg_confidence": 0.5725993514060974,
+  "false_positive_examples": [
+    {
+      "pixel_id": "Pali_0_10_north",
+      "confidence": 0.6047247648239136
+    },
+    {
+      "pixel_id": "Pali_0_117_south",
+      "confidence": 0.5203645825386047
+    },
+    {
+      "pixel_id": "Pali_0_117_west",
+      "confidence": 0.6197274327278137
+    },
+    {
+      "pixel_id": "Nagaur_0_387_southwest",
+      "confidence": 0.5783283710479736
+    },
+    {
+      "pixel_id": "Nagaur_1_155_center",
+      "confidence": 0.5525909662246704
+    }
+  ],
+  "false_negative_avg_confidence": 0.42488035559654236,
+  "false_negative_examples": [
+    {
+      "pixel_id": "Alwar_0_118_southeast",
+      "confidence": 0.44036394357681274
+    },
+    {
+      "pixel_id": "Jaipur_1_48_center",
+      "confidence": 0.4710543751716614
+    },
+    {
+      "pixel_id": "Pali_2_139_southeast",
+      "confidence": 0.440575510263443
+    },
+    {
+      "pixel_id": "Alwar_3_36_northeast",
+      "confidence": 0.3859589695930481
+    },
+    {
+      "pixel_id": "Nagaur_4_435_southeast",
+      "confidence": 0.2393139898777008
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "species_id": 177,
+  "species_name": "Vachellia nilotica",
+  "num_samples": 869,
+  "support": 200,
+  "positive_ratio": 0.23014959692955017,
+  "accuracy": 0.5891829689298044,
+  "precision": 0.3195402298850575,
+  "recall": 0.695,
+  "f1": 0.43779527559055115,
+  "roc_auc": 0.6891479820627803,
+  "average_precision": 0.38581136392875653,
+  "true_positives": 139,
+  "false_positives": 296,
+  "true_negatives": 373,
+  "false_negatives": 61,
+  "specificity": 0.5575485799701047,
+  "positive_class_avg_confidence": 0.6573132276535034,
+  "positive_class_std_confidence": 0.3228848874568939,
+  "negative_class_avg_confidence": 0.43524253368377686,
+  "negative_class_std_confidence": 0.33678531646728516,
+  "false_positive_avg_confidence": 0.7804428935050964,
+  "false_positive_examples": [
+    {
+      "pixel_id": "Barmer_2_108_west",
+      "confidence": 0.7400679588317871
+    },
+    {
+      "pixel_id": "Barmer_3_104_northwest",
+      "confidence": 0.7931936979293823
+    },
+    {
+      "pixel_id": "Barmer_31_32_southeast",
+      "confidence": 0.6736526489257812
+    },
+    {
+      "pixel_id": "Sikar_0_333_north",
+      "confidence": 0.6642335653305054
+    },
+    {
+      "pixel_id": "Sikar_3_65_north",
+      "confidence": 0.6285182237625122
+    }
+  ],
+  "false_negative_avg_confidence": 0.2137906402349472,
+  "false_negative_examples": [
+    {
+      "pixel_id": "Barmer_13_21_northeast",
+      "confidence": 0.13361121714115143
+    },
+    {
+      "pixel_id": "Sikar_4_51_west",
+      "confidence": 0.3430200517177582
+    },
+    {
+      "pixel_id": "Sikar_4_176_north",
+      "confidence": 0.10957963019609451
+    },
+    {
+      "pixel_id": "Sikar_4_176_southeast",
+      "confidence": 0.16370455920696259
+    },
+    {
+      "pixel_id": "Sikar_7_66_west",
+      "confidence": 0.13721832633018494
+    }
+  ]
+}

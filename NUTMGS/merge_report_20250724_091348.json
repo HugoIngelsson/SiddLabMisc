@@ -1,0 +1,104 @@
+{
+  "merge_timestamp": "2025-07-24T09:13:48.647891",
+  "merge_statistics": {
+    "locations_skipped": 4468,
+    "locations_replaced": 37,
+    "total_unique_locations": 10827,
+    "total_unique_images": 20663,
+    "images_copied": 19783,
+    "sentinel_pixels_copied": 20145,
+    "skysat_crops_copied": 19779
+  },
+  "district_overlaps": [
+    {
+      "district": "Barmer",
+      "appears_in": [
+        "rajasthan_comprehensive_dataset_part_8",
+        "rajasthan_top_10_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_comprehensive_dataset_part_8": 155,
+        "rajasthan_top_10_gsv": 14
+      },
+      "total_locations": 169
+    },
+    {
+      "district": "Sikar",
+      "appears_in": [
+        "rajasthan_comprehensive_dataset_part_8",
+        "Rajasthan_Zones_v4_resampled"
+      ],
+      "location_counts": {
+        "rajasthan_comprehensive_dataset_part_8": 3926,
+        "Rajasthan_Zones_v4_resampled": 1433
+      },
+      "total_locations": 5359
+    },
+    {
+      "district": "Jaipur",
+      "appears_in": [
+        "Rajasthan_Zones_v4_resampled",
+        "rajasthan_top_10_gsv"
+      ],
+      "location_counts": {
+        "Rajasthan_Zones_v4_resampled": 961,
+        "rajasthan_top_10_gsv": 730
+      },
+      "total_locations": 1691
+    },
+    {
+      "district": "Pali",
+      "appears_in": [
+        "Rajasthan_Zones_v4_resampled",
+        "rajasthan_top_10_gsv"
+      ],
+      "location_counts": {
+        "Rajasthan_Zones_v4_resampled": 197,
+        "rajasthan_top_10_gsv": 1729
+      },
+      "total_locations": 1926
+    },
+    {
+      "district": "Nagaur",
+      "appears_in": [
+        "Rajasthan_Zones_v4_resampled",
+        "rajasthan_top_10_gsv"
+      ],
+      "location_counts": {
+        "Rajasthan_Zones_v4_resampled": 126,
+        "rajasthan_top_10_gsv": 234
+      },
+      "total_locations": 360
+    },
+    {
+      "district": "Alwar",
+      "appears_in": [
+        "Rajasthan_Zones_v4_resampled",
+        "rajasthan_top_10_gsv"
+      ],
+      "location_counts": {
+        "Rajasthan_Zones_v4_resampled": 56,
+        "rajasthan_top_10_gsv": 359
+      },
+      "total_locations": 415
+    },
+    {
+      "district": "Bundi",
+      "appears_in": [
+        "Rajasthan_Zones_v4_resampled",
+        "rajasthan_top_10_gsv"
+      ],
+      "location_counts": {
+        "Rajasthan_Zones_v4_resampled": 6,
+        "rajasthan_top_10_gsv": 577
+      },
+      "total_locations": 583
+    }
+  ],
+  "category_distribution": {
+    "high_density_near": 0,
+    "high_density_far": 0,
+    "low_density_near": 0,
+    "low_density_far": 0
+  }
+}

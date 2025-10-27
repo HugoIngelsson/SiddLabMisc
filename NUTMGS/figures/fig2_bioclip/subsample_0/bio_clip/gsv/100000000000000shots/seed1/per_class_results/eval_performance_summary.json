@@ -1,0 +1,86 @@
+{
+  "top_10_classes": {
+    "Azadirachta indica": {
+      "f1_score": 0.41456582633053224,
+      "support": 178
+    },
+    "prosopis juliflora": {
+      "f1_score": 0.30434782608695654,
+      "support": 24
+    },
+    "Vachellia nilotica": {
+      "f1_score": 0.26519337016574585,
+      "support": 136
+    },
+    "Moringa oleifera": {
+      "f1_score": 0.17647058823529413,
+      "support": 8
+    },
+    "Dalbergia sissoo": {
+      "f1_score": 0.125,
+      "support": 26
+    },
+    "Ficus religiosa": {
+      "f1_score": 0.11764705882352941,
+      "support": 9
+    },
+    "Morus Alba": {
+      "f1_score": 0.07017543859649122,
+      "support": 20
+    },
+    "Ailanthus excelsa": {
+      "f1_score": 0.05128205128205128,
+      "support": 74
+    },
+    "Acalypha fruticosa": {
+      "f1_score": 0.0,
+      "support": 4
+    },
+    "Acrocarpus fraxinifolius": {
+      "f1_score": 0.0,
+      "support": 0
+    }
+  },
+  "bottom_10_classes": {
+    "other tree": {
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Not identifiable": {
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "no tree": {
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Tectona Grandis": {
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Madhuca Indica": {
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Aegle Marmelos": {
+      "f1_score": 0.0,
+      "support": 14
+    },
+    "Tecomela Undulata": {
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "saraca asoca": {
+      "f1_score": 0.0,
+      "support": 26
+    },
+    "Eucalyptus tereticornis": {
+      "f1_score": 0.0,
+      "support": 2
+    },
+    "Capparis Decidua": {
+      "f1_score": 0.0,
+      "support": 0
+    }
+  }
+}

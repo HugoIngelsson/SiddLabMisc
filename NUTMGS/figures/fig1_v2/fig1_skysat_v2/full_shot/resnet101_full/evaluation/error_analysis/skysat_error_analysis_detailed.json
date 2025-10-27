@@ -1,0 +1,692 @@
+{
+  "total_errors": 943,
+  "error_rate": 0.6436860068259386,
+  "error_confidence_stats": {
+    "mean": 0.34250909090042114,
+    "std": 0.049943819642066956,
+    "median": 0.33235958218574524,
+    "min": 0.2518276870250702,
+    "max": 0.5368407368659973
+  },
+  "correct_confidence_stats": {
+    "mean": 0.3535187840461731,
+    "std": 0.05182939022779465,
+    "median": 0.3467623293399811,
+    "min": 0.2531297206878662,
+    "max": 0.5214080214500427
+  },
+  "most_confused_pairs": [
+    {
+      "true_class": "Vachellia nilotica",
+      "predicted_class": "Azadirachta indica",
+      "true_class_id": 176,
+      "predicted_class_id": 23,
+      "count": 220
+    },
+    {
+      "true_class": "Ailanthus excelsa",
+      "predicted_class": "Azadirachta indica",
+      "true_class_id": 192,
+      "predicted_class_id": 23,
+      "count": 106
+    },
+    {
+      "true_class": "Prosopis cineraria",
+      "predicted_class": "Azadirachta indica",
+      "true_class_id": 146,
+      "predicted_class_id": 23,
+      "count": 100
+    },
+    {
+      "true_class": "Azadirachta indica",
+      "predicted_class": "Vachellia nilotica",
+      "true_class_id": 23,
+      "predicted_class_id": 176,
+      "count": 79
+    },
+    {
+      "true_class": "prosopis juliflora",
+      "predicted_class": "Azadirachta indica",
+      "true_class_id": 194,
+      "predicted_class_id": 23,
+      "count": 54
+    },
+    {
+      "true_class": "Prosopis cineraria",
+      "predicted_class": "Vachellia nilotica",
+      "true_class_id": 146,
+      "predicted_class_id": 176,
+      "count": 52
+    },
+    {
+      "true_class": "Ailanthus excelsa",
+      "predicted_class": "Vachellia nilotica",
+      "true_class_id": 192,
+      "predicted_class_id": 176,
+      "count": 34
+    },
+    {
+      "true_class": "saraca asoca",
+      "predicted_class": "Azadirachta indica",
+      "true_class_id": 193,
+      "predicted_class_id": 23,
+      "count": 33
+    },
+    {
+      "true_class": "Dalbergia sissoo",
+      "predicted_class": "Azadirachta indica",
+      "true_class_id": 72,
+      "predicted_class_id": 23,
+      "count": 30
+    },
+    {
+      "true_class": "Morus Alba",
+      "predicted_class": "Azadirachta indica",
+      "true_class_id": 190,
+      "predicted_class_id": 23,
+      "count": 29
+    }
+  ],
+  "high_confidence_errors": [
+    {
+      "sample_index": 2,
+      "skysat_filename": "tree_Alwar_Alwar_0_118_low_density_near_southeast_0_20250526_055706_494863_skysat.jpg",
+      "true_species": "Azadirachta indica",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 23,
+      "predicted_class_id": 176,
+      "confidence": 0.37596461176872253,
+      "true_class_prob": 0.23667386174201965
+    },
+    {
+      "sample_index": 3,
+      "skysat_filename": "tree_Pali_Pali_0_117_low_density_far_south_0_20250526_055707_703629_skysat.jpg",
+      "true_species": "Mangifera indica",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 123,
+      "predicted_class_id": 23,
+      "confidence": 0.3724746108055115,
+      "true_class_prob": 0.014481856487691402
+    },
+    {
+      "sample_index": 4,
+      "skysat_filename": "tree_Pali_Pali_0_117_low_density_near_west_0_20250526_055707_986419_skysat.jpg",
+      "true_species": "Aegle Marmelos",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 189,
+      "predicted_class_id": 23,
+      "confidence": 0.42557722330093384,
+      "true_class_prob": 0.013603553175926208
+    },
+    {
+      "sample_index": 7,
+      "skysat_filename": "tree_Jhunjhunu_Jhunjhunu_0_285_low_density_near_west_0_20250526_060046_144992_skysat.jpg",
+      "true_species": "Prosopis cineraria",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 146,
+      "predicted_class_id": 176,
+      "confidence": 0.40299955010414124,
+      "true_class_prob": 0.14773032069206238
+    },
+    {
+      "sample_index": 13,
+      "skysat_filename": "tree_Jaipur_Jaipur_2_50_low_density_near_northwest_0_20250526_061255_573075_skysat.jpg",
+      "true_species": "Albizia procera",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 9,
+      "predicted_class_id": 23,
+      "confidence": 0.4241785705089569,
+      "true_class_prob": 0.008232963271439075
+    },
+    {
+      "sample_index": 22,
+      "skysat_filename": "tree_Jhunjhunu_Jhunjhunu_2_328_low_density_near_east_0_20250526_061850_404740_skysat.jpg",
+      "true_species": "Prosopis cineraria",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 146,
+      "predicted_class_id": 176,
+      "confidence": 0.37762215733528137,
+      "true_class_prob": 0.1712862253189087
+    },
+    {
+      "sample_index": 23,
+      "skysat_filename": "tree_Jaipur_Jaipur_2_400_low_density_far_north_0_20250526_062013_569664_skysat.jpg",
+      "true_species": "Pongamia pinnata",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 144,
+      "predicted_class_id": 23,
+      "confidence": 0.4045696556568146,
+      "true_class_prob": 0.011792908422648907
+    },
+    {
+      "sample_index": 24,
+      "skysat_filename": "tree_Jaipur_Jaipur_2_457_low_density_near_southeast_0_20250526_062118_701936_skysat.jpg",
+      "true_species": "Vachellia nilotica",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 176,
+      "predicted_class_id": 23,
+      "confidence": 0.4333569407463074,
+      "true_class_prob": 0.19791841506958008
+    },
+    {
+      "sample_index": 29,
+      "skysat_filename": "tree_Pali_Pali_3_396_low_density_near_north_0_20250526_062825_517501_skysat.jpg",
+      "true_species": "Albizia procera",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 9,
+      "predicted_class_id": 23,
+      "confidence": 0.3937169909477234,
+      "true_class_prob": 0.00867774710059166
+    },
+    {
+      "sample_index": 37,
+      "skysat_filename": "tree_Pali_Pali_4_124_low_density_near_center_0_20250526_063228_087218_skysat.jpg",
+      "true_species": "Mangifera indica",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 123,
+      "predicted_class_id": 23,
+      "confidence": 0.43453601002693176,
+      "true_class_prob": 0.013754546642303467
+    },
+    {
+      "sample_index": 40,
+      "skysat_filename": "tree_Nagaur_Nagaur_4_371_low_density_near_east_0_20250526_063557_593045_skysat.jpg",
+      "true_species": "prosopis juliflora",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 194,
+      "predicted_class_id": 23,
+      "confidence": 0.40214529633522034,
+      "true_class_prob": 0.07314793765544891
+    },
+    {
+      "sample_index": 41,
+      "skysat_filename": "tree_Jhunjhunu_Jhunjhunu_4_392_low_density_far_south_0_20250526_063636_009033_skysat.jpg",
+      "true_species": "Prosopis cineraria",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 146,
+      "predicted_class_id": 176,
+      "confidence": 0.3704589903354645,
+      "true_class_prob": 0.21604451537132263
+    },
+    {
+      "sample_index": 49,
+      "skysat_filename": "tree_Jaipur_Jaipur_5_395_low_density_near_west_0_20250526_064508_235590_skysat.jpg",
+      "true_species": "Vachellia nilotica",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 176,
+      "predicted_class_id": 23,
+      "confidence": 0.428300142288208,
+      "true_class_prob": 0.17701095342636108
+    },
+    {
+      "sample_index": 53,
+      "skysat_filename": "tree_Jaipur_Jaipur_6_67_low_density_near_center_0_20250526_064755_775314_skysat.jpg",
+      "true_species": "Vachellia nilotica",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 176,
+      "predicted_class_id": 23,
+      "confidence": 0.41923806071281433,
+      "true_class_prob": 0.20617516338825226
+    },
+    {
+      "sample_index": 55,
+      "skysat_filename": "tree_Nagaur_Nagaur_6_304_low_density_far_northeast_0_20250526_065216_367212_skysat.jpg",
+      "true_species": "Vachellia nilotica",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 176,
+      "predicted_class_id": 23,
+      "confidence": 0.3835921883583069,
+      "true_class_prob": 0.17097090184688568
+    },
+    {
+      "sample_index": 57,
+      "skysat_filename": "tree_Nagaur_Nagaur_6_341_low_density_far_east_0_20250526_065255_633399_skysat.jpg",
+      "true_species": "Vachellia nilotica",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 176,
+      "predicted_class_id": 23,
+      "confidence": 0.39022406935691833,
+      "true_class_prob": 0.18542005121707916
+    },
+    {
+      "sample_index": 58,
+      "skysat_filename": "tree_Nagaur_Nagaur_6_341_low_density_near_west_0_20250526_065255_842372_skysat.jpg",
+      "true_species": "Dalbergia sissoo",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 72,
+      "predicted_class_id": 23,
+      "confidence": 0.4017139673233032,
+      "true_class_prob": 0.028987912461161613
+    },
+    {
+      "sample_index": 72,
+      "skysat_filename": "tree_Jaipur_Jaipur_8_249_low_density_near_northeast_0_20250526_070440_190124_skysat.jpg",
+      "true_species": "saraca asoca",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 193,
+      "predicted_class_id": 23,
+      "confidence": 0.41438084840774536,
+      "true_class_prob": 0.02691105753183365
+    },
+    {
+      "sample_index": 73,
+      "skysat_filename": "tree_Jaipur_Jaipur_9_55_low_density_far_northwest_0_20250526_070701_872808_skysat.jpg",
+      "true_species": "Acalypha fruticosa",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 0,
+      "predicted_class_id": 23,
+      "confidence": 0.4311480224132538,
+      "true_class_prob": 0.005342146847397089
+    },
+    {
+      "sample_index": 75,
+      "skysat_filename": "tree_Jaipur_Jaipur_9_195_low_density_near_northwest_0_20250526_070936_472162_skysat.jpg",
+      "true_species": "Albizia lebbeck",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 7,
+      "predicted_class_id": 23,
+      "confidence": 0.4046393632888794,
+      "true_class_prob": 0.004111292771995068
+    }
+  ],
+  "low_confidence_errors": [
+    {
+      "sample_index": 0,
+      "skysat_filename": "tree_Pali_Pali_0_10_low_density_far_north_0_20250526_055530_617380_skysat.jpg",
+      "true_species": "Aegle Marmelos",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 189,
+      "predicted_class_id": 23,
+      "confidence": 0.2909938097000122,
+      "true_class_prob": 0.013179234229028225
+    },
+    {
+      "sample_index": 1,
+      "skysat_filename": "tree_Pali_Pali_0_72_low_density_near_south_0_20250526_055625_853991_skysat.jpg",
+      "true_species": "Azadirachta indica",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 23,
+      "predicted_class_id": 176,
+      "confidence": 0.2837015986442566,
+      "true_class_prob": 0.27800247073173523
+    },
+    {
+      "sample_index": 6,
+      "skysat_filename": "tree_Jhunjhunu_Jhunjhunu_0_285_low_density_near_southwest_0_20250526_060045_705153_skysat.jpg",
+      "true_species": "Prosopis cineraria",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 146,
+      "predicted_class_id": 23,
+      "confidence": 0.28096410632133484,
+      "true_class_prob": 0.13285186886787415
+    },
+    {
+      "sample_index": 21,
+      "skysat_filename": "tree_Jhunjhunu_Jhunjhunu_2_166_low_density_near_southwest_0_20250526_061527_143888_skysat.jpg",
+      "true_species": "Prosopis cineraria",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 146,
+      "predicted_class_id": 23,
+      "confidence": 0.2742735743522644,
+      "true_class_prob": 0.18372125923633575
+    },
+    {
+      "sample_index": 27,
+      "skysat_filename": "tree_Jaipur_Jaipur_3_222_low_density_near_north_0_20250526_062524_614929_skysat.jpg",
+      "true_species": "Ailanthus excelsa",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 192,
+      "predicted_class_id": 23,
+      "confidence": 0.3031584918498993,
+      "true_class_prob": 0.10604456812143326
+    },
+    {
+      "sample_index": 32,
+      "skysat_filename": "tree_Nagaur_Nagaur_3_463_low_density_near_center_0_20250526_062934_194526_skysat.jpg",
+      "true_species": "Ailanthus excelsa",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 192,
+      "predicted_class_id": 176,
+      "confidence": 0.29102781414985657,
+      "true_class_prob": 0.09926894307136536
+    },
+    {
+      "sample_index": 33,
+      "skysat_filename": "tree_Jhunjhunu_Jhunjhunu_3_472_low_density_far_northeast_0_20250526_062948_725630_skysat.jpg",
+      "true_species": "Dalbergia sissoo",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 72,
+      "predicted_class_id": 176,
+      "confidence": 0.28379350900650024,
+      "true_class_prob": 0.04143260791897774
+    },
+    {
+      "sample_index": 34,
+      "skysat_filename": "tree_Pali_Pali_3_487_low_density_near_east_0_20250526_063006_568263_skysat.jpg",
+      "true_species": "prosopis juliflora",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 194,
+      "predicted_class_id": 23,
+      "confidence": 0.301737517118454,
+      "true_class_prob": 0.03259706124663353
+    },
+    {
+      "sample_index": 43,
+      "skysat_filename": "tree_Jhunjhunu_Jhunjhunu_5_44_low_density_near_southeast_1_20250526_063821_735999_skysat.jpg",
+      "true_species": "Ziziphus jujuba",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 180,
+      "predicted_class_id": 23,
+      "confidence": 0.25861647725105286,
+      "true_class_prob": 0.007177374325692654
+    },
+    {
+      "sample_index": 45,
+      "skysat_filename": "tree_Nagaur_Nagaur_5_211_low_density_far_northeast_0_20250526_064113_994586_skysat.jpg",
+      "true_species": "Azadirachta indica",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 23,
+      "predicted_class_id": 176,
+      "confidence": 0.28029242157936096,
+      "true_class_prob": 0.23680537939071655
+    },
+    {
+      "sample_index": 47,
+      "skysat_filename": "tree_Jaipur_Jaipur_5_290_low_density_near_northwest_0_20250526_064302_863361_skysat.jpg",
+      "true_species": "saraca asoca",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 193,
+      "predicted_class_id": 176,
+      "confidence": 0.29005685448646545,
+      "true_class_prob": 0.01466083712875843
+    },
+    {
+      "sample_index": 48,
+      "skysat_filename": "tree_Sikar_Sikar_5_300_low_density_near_north_0_20250526_064320_024316_skysat.jpg",
+      "true_species": "Ailanthus excelsa",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 192,
+      "predicted_class_id": 23,
+      "confidence": 0.28617367148399353,
+      "true_class_prob": 0.10975850373506546
+    },
+    {
+      "sample_index": 52,
+      "skysat_filename": "tree_Jhunjhunu_Jhunjhunu_6_30_low_density_near_west_0_20250526_064720_655108_skysat.jpg",
+      "true_species": "Vachellia nilotica",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 176,
+      "predicted_class_id": 23,
+      "confidence": 0.2640421688556671,
+      "true_class_prob": 0.2501339912414551
+    },
+    {
+      "sample_index": 56,
+      "skysat_filename": "tree_Jhunjhunu_Jhunjhunu_6_298_low_density_near_center_0_20250526_065217_607119_skysat.jpg",
+      "true_species": "Azadirachta indica",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 23,
+      "predicted_class_id": 176,
+      "confidence": 0.29703497886657715,
+      "true_class_prob": 0.2410193830728531
+    },
+    {
+      "sample_index": 65,
+      "skysat_filename": "tree_Jhunjhunu_Jhunjhunu_7_123_low_density_far_northeast_0_20250526_065733_847044_skysat.jpg",
+      "true_species": "Prosopis cineraria",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 146,
+      "predicted_class_id": 23,
+      "confidence": 0.2949868142604828,
+      "true_class_prob": 0.15295641124248505
+    },
+    {
+      "sample_index": 70,
+      "skysat_filename": "tree_Pali_Pali_8_126_low_density_near_center_0_20250526_070313_242437_skysat.jpg",
+      "true_species": "prosopis juliflora",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 194,
+      "predicted_class_id": 23,
+      "confidence": 0.2867855727672577,
+      "true_class_prob": 0.033044468611478806
+    },
+    {
+      "sample_index": 81,
+      "skysat_filename": "tree_Jhunjhunu_Jhunjhunu_10_38_low_density_far_center_0_20250526_071435_278488_skysat.jpg",
+      "true_species": "Ailanthus excelsa",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 192,
+      "predicted_class_id": 23,
+      "confidence": 0.28516265749931335,
+      "true_class_prob": 0.12279299646615982
+    },
+    {
+      "sample_index": 83,
+      "skysat_filename": "tree_Jhunjhunu_Jhunjhunu_10_264_low_density_near_east_0_20250526_071912_663024_skysat.jpg",
+      "true_species": "Prosopis cineraria",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 146,
+      "predicted_class_id": 176,
+      "confidence": 0.29436731338500977,
+      "true_class_prob": 0.1871388852596283
+    },
+    {
+      "sample_index": 88,
+      "skysat_filename": "tree_Sikar_Sikar_11_27_low_density_near_east_0_20250526_072032_558712_skysat.jpg",
+      "true_species": "Vachellia nilotica",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 176,
+      "predicted_class_id": 23,
+      "confidence": 0.3003697991371155,
+      "true_class_prob": 0.2422279566526413
+    },
+    {
+      "sample_index": 108,
+      "skysat_filename": "tree_Jhunjhunu_Jhunjhunu_14_200_low_density_far_northwest_0_20250526_074817_188145_skysat.jpg",
+      "true_species": "Aegle Marmelos",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 189,
+      "predicted_class_id": 23,
+      "confidence": 0.2820068597793579,
+      "true_class_prob": 0.01194636058062315
+    }
+  ],
+  "per_class_error_rates": {
+    "Acalypha fruticosa": {
+      "class_id": 0,
+      "total_samples": 5,
+      "errors": 5,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Albizia lebbeck": {
+      "class_id": 7,
+      "total_samples": 5,
+      "errors": 5,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Albizia procera": {
+      "class_id": 9,
+      "total_samples": 9,
+      "errors": 9,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Alstonia scholaris": {
+      "class_id": 12,
+      "total_samples": 1,
+      "errors": 1,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Azadirachta indica": {
+      "class_id": 23,
+      "total_samples": 488,
+      "errors": 79,
+      "error_rate": 0.16188524590163936,
+      "accuracy": 0.8381147540983607
+    },
+    "Butea monosperma": {
+      "class_id": 43,
+      "total_samples": 1,
+      "errors": 1,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Cassia fistula": {
+      "class_id": 54,
+      "total_samples": 2,
+      "errors": 2,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Cordia myxa": {
+      "class_id": 65,
+      "total_samples": 2,
+      "errors": 2,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Dalbergia sissoo": {
+      "class_id": 72,
+      "total_samples": 51,
+      "errors": 51,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Ficus benghalensis": {
+      "class_id": 86,
+      "total_samples": 17,
+      "errors": 17,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Ficus religiosa": {
+      "class_id": 93,
+      "total_samples": 21,
+      "errors": 21,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Mangifera indica": {
+      "class_id": 123,
+      "total_samples": 16,
+      "errors": 16,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Moringa oleifera": {
+      "class_id": 129,
+      "total_samples": 9,
+      "errors": 9,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Phoenix sylvestris": {
+      "class_id": 137,
+      "total_samples": 9,
+      "errors": 9,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Pongamia pinnata": {
+      "class_id": 144,
+      "total_samples": 15,
+      "errors": 15,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Prosopis cineraria": {
+      "class_id": 146,
+      "total_samples": 153,
+      "errors": 152,
+      "error_rate": 0.9934640522875817,
+      "accuracy": 0.006535947712418277
+    },
+    "Prosopis farcta": {
+      "class_id": 147,
+      "total_samples": 1,
+      "errors": 1,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Terminalia arjuna": {
+      "class_id": 168,
+      "total_samples": 1,
+      "errors": 1,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Vachellia leucophloea": {
+      "class_id": 175,
+      "total_samples": 9,
+      "errors": 9,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Vachellia nilotica": {
+      "class_id": 176,
+      "total_samples": 333,
+      "errors": 221,
+      "error_rate": 0.6636636636636637,
+      "accuracy": 0.3363363363363363
+    },
+    "Ziziphus jujuba": {
+      "class_id": 180,
+      "total_samples": 12,
+      "errors": 12,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Ziziphus mauritiana": {
+      "class_id": 181,
+      "total_samples": 2,
+      "errors": 2,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Aegle Marmelos": {
+      "class_id": 189,
+      "total_samples": 17,
+      "errors": 17,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Morus Alba": {
+      "class_id": 190,
+      "total_samples": 34,
+      "errors": 34,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Ailanthus excelsa": {
+      "class_id": 192,
+      "total_samples": 140,
+      "errors": 140,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "saraca asoca": {
+      "class_id": 193,
+      "total_samples": 38,
+      "errors": 38,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "prosopis juliflora": {
+      "class_id": 194,
+      "total_samples": 65,
+      "errors": 65,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Eucalyptus tereticornis": {
+      "class_id": 195,
+      "total_samples": 9,
+      "errors": 9,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    }
+  }
+}

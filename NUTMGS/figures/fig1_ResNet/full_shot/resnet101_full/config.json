@@ -1,0 +1,19 @@
+{
+  "dataset_dir": "/app/DATASET/Rajasthan_Zones_v5/merged_human_labels/",
+  "arch": "resnet101",
+  "epochs": 50,
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "shots": "full",
+  "use_skysat": false,
+  "use_sentinel": false,
+  "dropout_rate": 0.5,
+  "output_dir": "/app/DATASET/figures/fig1_ResNet/full_shot/",
+  "seed": 42,
+  "eval_only": false,
+  "model_path": null,
+  "num_classes": 210,
+  "train_samples": 6815,
+  "val_samples": 852
+}

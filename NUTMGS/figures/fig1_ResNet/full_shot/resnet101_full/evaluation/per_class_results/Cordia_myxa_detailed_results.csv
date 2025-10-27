@@ -1,0 +1,3 @@
+sample_index,filename,true_label,predicted_label,correct,confidence,true_class_probability,predicted_class_probability
+446,tree_Pali_Pali_9_53_low_density_near_southwest_0_20250526_070707_688024.jpg,65,23,False,0.2133362889289856,0.029610538855195045,0.2133362889289856
+524,tree_Jaipur_Jaipur_21_271_low_density_near_east_0_20250526_083848_789750.jpg,65,144,False,0.5930394530296326,0.0016089219134300947,0.5930394530296326

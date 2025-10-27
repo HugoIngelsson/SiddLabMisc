@@ -1,0 +1,856 @@
+{
+  "total_errors": 399,
+  "error_rate": 0.3439655172413793,
+  "error_confidence_stats": {
+    "mean": 0.005649566650390625,
+    "std": 0.0,
+    "median": 0.005645751953125,
+    "min": 0.005374908447265625,
+    "max": 0.00595855712890625
+  },
+  "correct_confidence_stats": {
+    "mean": 0.0057525634765625,
+    "std": 0.0,
+    "median": 0.00574493408203125,
+    "min": 0.005390167236328125,
+    "max": 0.006134033203125
+  },
+  "most_confused_pairs": [
+    {
+      "true_class": "Prosopis cineraria",
+      "predicted_class": "Vachellia nilotica",
+      "true_class_id": 146,
+      "predicted_class_id": 176,
+      "count": 30
+    },
+    {
+      "true_class": "Prosopis cineraria",
+      "predicted_class": "Azadirachta indica",
+      "true_class_id": 146,
+      "predicted_class_id": 23,
+      "count": 23
+    },
+    {
+      "true_class": "Vachellia nilotica",
+      "predicted_class": "Prosopis cineraria",
+      "true_class_id": 176,
+      "predicted_class_id": 146,
+      "count": 21
+    },
+    {
+      "true_class": "Vachellia nilotica",
+      "predicted_class": "Azadirachta indica",
+      "true_class_id": 176,
+      "predicted_class_id": 23,
+      "count": 21
+    },
+    {
+      "true_class": "Ailanthus excelsa",
+      "predicted_class": "Azadirachta indica",
+      "true_class_id": 192,
+      "predicted_class_id": 23,
+      "count": 20
+    },
+    {
+      "true_class": "Azadirachta indica",
+      "predicted_class": "Vachellia nilotica",
+      "true_class_id": 23,
+      "predicted_class_id": 176,
+      "count": 18
+    },
+    {
+      "true_class": "Ailanthus excelsa",
+      "predicted_class": "Vachellia nilotica",
+      "true_class_id": 192,
+      "predicted_class_id": 176,
+      "count": 15
+    },
+    {
+      "true_class": "Azadirachta indica",
+      "predicted_class": "Ailanthus excelsa",
+      "true_class_id": 23,
+      "predicted_class_id": 192,
+      "count": 13
+    },
+    {
+      "true_class": "Azadirachta indica",
+      "predicted_class": "Prosopis cineraria",
+      "true_class_id": 23,
+      "predicted_class_id": 146,
+      "count": 12
+    },
+    {
+      "true_class": "saraca asoca",
+      "predicted_class": "Azadirachta indica",
+      "true_class_id": 193,
+      "predicted_class_id": 23,
+      "count": 12
+    },
+    {
+      "true_class": "Vachellia nilotica",
+      "predicted_class": "prosopis juliflora",
+      "true_class_id": 176,
+      "predicted_class_id": 194,
+      "count": 11
+    },
+    {
+      "true_class": "prosopis juliflora",
+      "predicted_class": "Vachellia nilotica",
+      "true_class_id": 194,
+      "predicted_class_id": 176,
+      "count": 10
+    },
+    {
+      "true_class": "Dalbergia sissoo",
+      "predicted_class": "Azadirachta indica",
+      "true_class_id": 72,
+      "predicted_class_id": 23,
+      "count": 9
+    },
+    {
+      "true_class": "Prosopis cineraria",
+      "predicted_class": "Ailanthus excelsa",
+      "true_class_id": 146,
+      "predicted_class_id": 192,
+      "count": 8
+    },
+    {
+      "true_class": "prosopis juliflora",
+      "predicted_class": "Azadirachta indica",
+      "true_class_id": 194,
+      "predicted_class_id": 23,
+      "count": 6
+    },
+    {
+      "true_class": "Mangifera indica",
+      "predicted_class": "Azadirachta indica",
+      "true_class_id": 123,
+      "predicted_class_id": 23,
+      "count": 6
+    },
+    {
+      "true_class": "Vachellia leucophloea",
+      "predicted_class": "Vachellia nilotica",
+      "true_class_id": 175,
+      "predicted_class_id": 176,
+      "count": 4
+    },
+    {
+      "true_class": "Ailanthus excelsa",
+      "predicted_class": "Prosopis cineraria",
+      "true_class_id": 192,
+      "predicted_class_id": 146,
+      "count": 4
+    },
+    {
+      "true_class": "Moringa oleifera",
+      "predicted_class": "Azadirachta indica",
+      "true_class_id": 129,
+      "predicted_class_id": 23,
+      "count": 4
+    },
+    {
+      "true_class": "Dalbergia sissoo",
+      "predicted_class": "Ailanthus excelsa",
+      "true_class_id": 72,
+      "predicted_class_id": 192,
+      "count": 4
+    }
+  ],
+  "high_confidence_errors": [
+    {
+      "sample_index": 6,
+      "filename": "sample_6",
+      "true_species": "Azadirachta indica",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 23,
+      "predicted_class_id": 176,
+      "confidence": 0.00576019287109375,
+      "true_class_prob": 0.005680084228515625,
+      "top_k_predictions": [
+        "Vachellia nilotica",
+        "prosopis juliflora",
+        "Azadirachta indica",
+        "Prosopis cineraria",
+        "Ailanthus excelsa"
+      ]
+    },
+    {
+      "sample_index": 17,
+      "filename": "sample_17",
+      "true_species": "Vachellia nilotica",
+      "predicted_species": "prosopis juliflora",
+      "true_class_id": 176,
+      "predicted_class_id": 194,
+      "confidence": 0.005748748779296875,
+      "true_class_prob": 0.0057373046875,
+      "top_k_predictions": [
+        "prosopis juliflora",
+        "Vachellia nilotica",
+        "Moringa oleifera",
+        "Prosopis cineraria",
+        "Ailanthus excelsa"
+      ]
+    },
+    {
+      "sample_index": 20,
+      "filename": "sample_20",
+      "true_species": "Azadirachta indica",
+      "predicted_species": "Prosopis cineraria",
+      "true_class_id": 23,
+      "predicted_class_id": 146,
+      "confidence": 0.005733489990234375,
+      "true_class_prob": 0.00555419921875,
+      "top_k_predictions": [
+        "Prosopis cineraria",
+        "Dalbergia sissoo",
+        "Azadirachta indica",
+        "Ziziphus jujuba",
+        "Ficus religiosa"
+      ]
+    },
+    {
+      "sample_index": 29,
+      "filename": "sample_29",
+      "true_species": "Vachellia nilotica",
+      "predicted_species": "Prosopis cineraria",
+      "true_class_id": 176,
+      "predicted_class_id": 146,
+      "confidence": 0.005733489990234375,
+      "true_class_prob": 0.0055999755859375,
+      "top_k_predictions": [
+        "Prosopis cineraria",
+        "Azadirachta indica",
+        "Vachellia nilotica",
+        "Ailanthus excelsa",
+        "Morus Alba"
+      ]
+    },
+    {
+      "sample_index": 40,
+      "filename": "sample_40",
+      "true_species": "Vachellia nilotica",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 176,
+      "predicted_class_id": 23,
+      "confidence": 0.005794525146484375,
+      "true_class_prob": 0.00559234619140625,
+      "top_k_predictions": [
+        "Azadirachta indica",
+        "Ailanthus excelsa",
+        "Acalypha fruticosa",
+        "Vachellia nilotica",
+        "Prosopis cineraria"
+      ]
+    },
+    {
+      "sample_index": 58,
+      "filename": "sample_58",
+      "true_species": "Vachellia nilotica",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 176,
+      "predicted_class_id": 23,
+      "confidence": 0.00585174560546875,
+      "true_class_prob": 0.00568389892578125,
+      "top_k_predictions": [
+        "Azadirachta indica",
+        "Vachellia nilotica",
+        "Prosopis cineraria",
+        "Ailanthus excelsa",
+        "Morus Alba"
+      ]
+    },
+    {
+      "sample_index": 81,
+      "filename": "sample_81",
+      "true_species": "Azadirachta indica",
+      "predicted_species": "Ailanthus excelsa",
+      "true_class_id": 23,
+      "predicted_class_id": 192,
+      "confidence": 0.00576019287109375,
+      "true_class_prob": 0.005695343017578125,
+      "top_k_predictions": [
+        "Ailanthus excelsa",
+        "Azadirachta indica",
+        "Ficus religiosa",
+        "Acalypha fruticosa",
+        "Vachellia nilotica"
+      ]
+    },
+    {
+      "sample_index": 84,
+      "filename": "sample_84",
+      "true_species": "Prosopis cineraria",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 146,
+      "predicted_class_id": 176,
+      "confidence": 0.00589752197265625,
+      "true_class_prob": 0.005794525146484375,
+      "top_k_predictions": [
+        "Vachellia nilotica",
+        "Prosopis cineraria",
+        "Vachellia leucophloea",
+        "Azadirachta indica",
+        "Acalypha fruticosa"
+      ]
+    },
+    {
+      "sample_index": 106,
+      "filename": "sample_106",
+      "true_species": "Vachellia leucophloea",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 175,
+      "predicted_class_id": 176,
+      "confidence": 0.005828857421875,
+      "true_class_prob": 0.005664825439453125,
+      "top_k_predictions": [
+        "Vachellia nilotica",
+        "Ziziphus jujuba",
+        "Vachellia leucophloea",
+        "Ziziphus mauritiana",
+        "Prosopis cineraria"
+      ]
+    },
+    {
+      "sample_index": 112,
+      "filename": "sample_112",
+      "true_species": "Azadirachta indica",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 23,
+      "predicted_class_id": 176,
+      "confidence": 0.005886077880859375,
+      "true_class_prob": 0.005641937255859375,
+      "top_k_predictions": [
+        "Vachellia nilotica",
+        "Azadirachta indica",
+        "Prosopis cineraria",
+        "Vachellia leucophloea",
+        "Ailanthus excelsa"
+      ]
+    },
+    {
+      "sample_index": 113,
+      "filename": "sample_113",
+      "true_species": "Dalbergia sissoo",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 72,
+      "predicted_class_id": 176,
+      "confidence": 0.005764007568359375,
+      "true_class_prob": 0.0056304931640625,
+      "top_k_predictions": [
+        "Vachellia nilotica",
+        "Ziziphus mauritiana",
+        "Ziziphus jujuba",
+        "Vachellia leucophloea",
+        "Dalbergia sissoo"
+      ]
+    },
+    {
+      "sample_index": 132,
+      "filename": "sample_132",
+      "true_species": "Mangifera indica",
+      "predicted_species": "saraca asoca",
+      "true_class_id": 123,
+      "predicted_class_id": 193,
+      "confidence": 0.005733489990234375,
+      "true_class_prob": 0.005573272705078125,
+      "top_k_predictions": [
+        "saraca asoca",
+        "Azadirachta indica",
+        "Mangifera indica",
+        "Aegle Marmelos",
+        "Morus Alba"
+      ]
+    },
+    {
+      "sample_index": 141,
+      "filename": "sample_141",
+      "true_species": "Ailanthus excelsa",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 192,
+      "predicted_class_id": 176,
+      "confidence": 0.005767822265625,
+      "true_class_prob": 0.005535125732421875,
+      "top_k_predictions": [
+        "Vachellia nilotica",
+        "prosopis juliflora",
+        "Azadirachta indica",
+        "Ziziphus jujuba",
+        "Vachellia leucophloea"
+      ]
+    },
+    {
+      "sample_index": 162,
+      "filename": "sample_162",
+      "true_species": "Morus Alba",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 190,
+      "predicted_class_id": 23,
+      "confidence": 0.00576019287109375,
+      "true_class_prob": 0.005474090576171875,
+      "top_k_predictions": [
+        "Azadirachta indica",
+        "Mangifera indica",
+        "Ailanthus excelsa",
+        "Vachellia nilotica",
+        "Prosopis cineraria"
+      ]
+    },
+    {
+      "sample_index": 170,
+      "filename": "sample_170",
+      "true_species": "Prosopis cineraria",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 146,
+      "predicted_class_id": 176,
+      "confidence": 0.005794525146484375,
+      "true_class_prob": 0.00577545166015625,
+      "top_k_predictions": [
+        "Vachellia nilotica",
+        "Prosopis cineraria",
+        "Ailanthus excelsa",
+        "Vachellia leucophloea",
+        "Azadirachta indica"
+      ]
+    },
+    {
+      "sample_index": 175,
+      "filename": "sample_175",
+      "true_species": "prosopis juliflora",
+      "predicted_species": "Prosopis cineraria",
+      "true_class_id": 194,
+      "predicted_class_id": 146,
+      "confidence": 0.005870819091796875,
+      "true_class_prob": 0.0053253173828125,
+      "top_k_predictions": [
+        "Prosopis cineraria",
+        "Vachellia leucophloea",
+        "Vachellia nilotica",
+        "Ziziphus jujuba",
+        "Ailanthus excelsa"
+      ]
+    },
+    {
+      "sample_index": 199,
+      "filename": "sample_199",
+      "true_species": "Prosopis cineraria",
+      "predicted_species": "Dalbergia sissoo",
+      "true_class_id": 146,
+      "predicted_class_id": 72,
+      "confidence": 0.00582122802734375,
+      "true_class_prob": 0.005512237548828125,
+      "top_k_predictions": [
+        "Dalbergia sissoo",
+        "Azadirachta indica",
+        "Acalypha fruticosa",
+        "Prosopis cineraria",
+        "Vachellia nilotica"
+      ]
+    },
+    {
+      "sample_index": 200,
+      "filename": "sample_200",
+      "true_species": "Prosopis cineraria",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 146,
+      "predicted_class_id": 176,
+      "confidence": 0.00589752197265625,
+      "true_class_prob": 0.005718231201171875,
+      "top_k_predictions": [
+        "Vachellia nilotica",
+        "Prosopis cineraria",
+        "Vachellia leucophloea",
+        "prosopis juliflora",
+        "Ziziphus jujuba"
+      ]
+    },
+    {
+      "sample_index": 201,
+      "filename": "sample_201",
+      "true_species": "Prosopis cineraria",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 146,
+      "predicted_class_id": 176,
+      "confidence": 0.00579071044921875,
+      "true_class_prob": 0.005657196044921875,
+      "top_k_predictions": [
+        "Vachellia nilotica",
+        "Prosopis cineraria",
+        "Azadirachta indica",
+        "Vachellia leucophloea",
+        "Ailanthus excelsa"
+      ]
+    },
+    {
+      "sample_index": 202,
+      "filename": "sample_202",
+      "true_species": "Prosopis cineraria",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 146,
+      "predicted_class_id": 23,
+      "confidence": 0.005855560302734375,
+      "true_class_prob": 0.005680084228515625,
+      "top_k_predictions": [
+        "Azadirachta indica",
+        "Prosopis cineraria",
+        "Vachellia nilotica",
+        "Dalbergia sissoo",
+        "Ailanthus excelsa"
+      ]
+    },
+    {
+      "sample_index": 208,
+      "filename": "sample_208",
+      "true_species": "Prosopis cineraria",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 146,
+      "predicted_class_id": 176,
+      "confidence": 0.005764007568359375,
+      "true_class_prob": 0.005725860595703125,
+      "top_k_predictions": [
+        "Vachellia nilotica",
+        "Prosopis cineraria",
+        "Azadirachta indica",
+        "Ailanthus excelsa",
+        "Morus Alba"
+      ]
+    },
+    {
+      "sample_index": 211,
+      "filename": "sample_211",
+      "true_species": "Ailanthus excelsa",
+      "predicted_species": "Azadirachta indica",
+      "true_class_id": 192,
+      "predicted_class_id": 23,
+      "confidence": 0.00574493408203125,
+      "true_class_prob": 0.005558013916015625,
+      "top_k_predictions": [
+        "Azadirachta indica",
+        "Vachellia nilotica",
+        "Prosopis cineraria",
+        "Ailanthus excelsa",
+        "Dalbergia sissoo"
+      ]
+    },
+    {
+      "sample_index": 218,
+      "filename": "sample_218",
+      "true_species": "Ailanthus excelsa",
+      "predicted_species": "Prosopis cineraria",
+      "true_class_id": 192,
+      "predicted_class_id": 146,
+      "confidence": 0.005840301513671875,
+      "true_class_prob": 0.005401611328125,
+      "top_k_predictions": [
+        "Prosopis cineraria",
+        "Vachellia nilotica",
+        "Azadirachta indica",
+        "Vachellia leucophloea",
+        "Morus Alba"
+      ]
+    },
+    {
+      "sample_index": 232,
+      "filename": "sample_232",
+      "true_species": "Vachellia nilotica",
+      "predicted_species": "Moringa oleifera",
+      "true_class_id": 176,
+      "predicted_class_id": 129,
+      "confidence": 0.00572967529296875,
+      "true_class_prob": 0.005680084228515625,
+      "top_k_predictions": [
+        "Moringa oleifera",
+        "Vachellia nilotica",
+        "Azadirachta indica",
+        "Prosopis cineraria",
+        "prosopis juliflora"
+      ]
+    },
+    {
+      "sample_index": 242,
+      "filename": "sample_242",
+      "true_species": "Prosopis cineraria",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 146,
+      "predicted_class_id": 176,
+      "confidence": 0.005771636962890625,
+      "true_class_prob": 0.005767822265625,
+      "top_k_predictions": [
+        "Vachellia nilotica",
+        "Prosopis cineraria",
+        "Vachellia leucophloea",
+        "Azadirachta indica",
+        "Dalbergia sissoo"
+      ]
+    },
+    {
+      "sample_index": 243,
+      "filename": "sample_243",
+      "true_species": "Prosopis cineraria",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 146,
+      "predicted_class_id": 176,
+      "confidence": 0.0057373046875,
+      "true_class_prob": 0.005664825439453125,
+      "top_k_predictions": [
+        "Vachellia nilotica",
+        "Azadirachta indica",
+        "Prosopis cineraria",
+        "Ailanthus excelsa",
+        "Acalypha fruticosa"
+      ]
+    },
+    {
+      "sample_index": 249,
+      "filename": "sample_249",
+      "true_species": "Ailanthus excelsa",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 192,
+      "predicted_class_id": 176,
+      "confidence": 0.005764007568359375,
+      "true_class_prob": 0.00560760498046875,
+      "top_k_predictions": [
+        "Vachellia nilotica",
+        "Ailanthus excelsa",
+        "Morus Alba",
+        "Azadirachta indica",
+        "Prosopis cineraria"
+      ]
+    },
+    {
+      "sample_index": 297,
+      "filename": "sample_41",
+      "true_species": "Vachellia nilotica",
+      "predicted_species": "Prosopis cineraria",
+      "true_class_id": 176,
+      "predicted_class_id": 146,
+      "confidence": 0.005863189697265625,
+      "true_class_prob": 0.00572967529296875,
+      "top_k_predictions": [
+        "Prosopis cineraria",
+        "Vachellia nilotica",
+        "Azadirachta indica",
+        "Ailanthus excelsa",
+        "Morus Alba"
+      ]
+    },
+    {
+      "sample_index": 307,
+      "filename": "sample_51",
+      "true_species": "Ailanthus excelsa",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 192,
+      "predicted_class_id": 176,
+      "confidence": 0.0057525634765625,
+      "true_class_prob": 0.005741119384765625,
+      "top_k_predictions": [
+        "Vachellia nilotica",
+        "Ailanthus excelsa",
+        "Azadirachta indica",
+        "prosopis juliflora",
+        "Moringa oleifera"
+      ]
+    },
+    {
+      "sample_index": 312,
+      "filename": "sample_56",
+      "true_species": "Azadirachta indica",
+      "predicted_species": "Vachellia nilotica",
+      "true_class_id": 23,
+      "predicted_class_id": 176,
+      "confidence": 0.005939483642578125,
+      "true_class_prob": 0.005825042724609375,
+      "top_k_predictions": [
+        "Vachellia nilotica",
+        "Azadirachta indica",
+        "Prosopis cineraria",
+        "Ailanthus excelsa",
+        "saraca asoca"
+      ]
+    }
+  ],
+  "per_class_error_rates": {
+    "Acalypha fruticosa": {
+      "class_id": 0,
+      "total_samples": 4,
+      "errors": 4,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Albizia lebbeck": {
+      "class_id": 7,
+      "total_samples": 5,
+      "errors": 5,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Albizia procera": {
+      "class_id": 9,
+      "total_samples": 8,
+      "errors": 5,
+      "error_rate": 0.625,
+      "accuracy": 0.375
+    },
+    "Alstonia scholaris": {
+      "class_id": 12,
+      "total_samples": 1,
+      "errors": 1,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Azadirachta indica": {
+      "class_id": 23,
+      "total_samples": 344,
+      "errors": 62,
+      "error_rate": 0.18023255813953487,
+      "accuracy": 0.8197674418604651
+    },
+    "Cassia fistula": {
+      "class_id": 54,
+      "total_samples": 1,
+      "errors": 0,
+      "error_rate": 0.0,
+      "accuracy": 1.0
+    },
+    "Cordia myxa": {
+      "class_id": 65,
+      "total_samples": 2,
+      "errors": 2,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Dalbergia sissoo": {
+      "class_id": 72,
+      "total_samples": 40,
+      "errors": 22,
+      "error_rate": 0.55,
+      "accuracy": 0.44999999999999996
+    },
+    "Ficus benghalensis": {
+      "class_id": 86,
+      "total_samples": 15,
+      "errors": 8,
+      "error_rate": 0.5333333333333333,
+      "accuracy": 0.4666666666666667
+    },
+    "Ficus religiosa": {
+      "class_id": 93,
+      "total_samples": 15,
+      "errors": 9,
+      "error_rate": 0.6,
+      "accuracy": 0.4
+    },
+    "Mangifera indica": {
+      "class_id": 123,
+      "total_samples": 13,
+      "errors": 12,
+      "error_rate": 0.9230769230769231,
+      "accuracy": 0.07692307692307687
+    },
+    "Moringa oleifera": {
+      "class_id": 129,
+      "total_samples": 9,
+      "errors": 8,
+      "error_rate": 0.8888888888888888,
+      "accuracy": 0.11111111111111116
+    },
+    "Phoenix sylvestris": {
+      "class_id": 137,
+      "total_samples": 5,
+      "errors": 1,
+      "error_rate": 0.2,
+      "accuracy": 0.8
+    },
+    "Pongamia pinnata": {
+      "class_id": 144,
+      "total_samples": 14,
+      "errors": 7,
+      "error_rate": 0.5,
+      "accuracy": 0.5
+    },
+    "Prosopis cineraria": {
+      "class_id": 146,
+      "total_samples": 134,
+      "errors": 68,
+      "error_rate": 0.5074626865671642,
+      "accuracy": 0.4925373134328358
+    },
+    "Prosopis farcta": {
+      "class_id": 147,
+      "total_samples": 1,
+      "errors": 1,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Vachellia leucophloea": {
+      "class_id": 175,
+      "total_samples": 8,
+      "errors": 6,
+      "error_rate": 0.75,
+      "accuracy": 0.25
+    },
+    "Vachellia nilotica": {
+      "class_id": 176,
+      "total_samples": 257,
+      "errors": 66,
+      "error_rate": 0.25680933852140075,
+      "accuracy": 0.7431906614785992
+    },
+    "Ziziphus jujuba": {
+      "class_id": 180,
+      "total_samples": 12,
+      "errors": 8,
+      "error_rate": 0.6666666666666666,
+      "accuracy": 0.33333333333333337
+    },
+    "Ziziphus mauritiana": {
+      "class_id": 181,
+      "total_samples": 2,
+      "errors": 2,
+      "error_rate": 1.0,
+      "accuracy": 0.0
+    },
+    "Aegle Marmelos": {
+      "class_id": 189,
+      "total_samples": 15,
+      "errors": 7,
+      "error_rate": 0.4666666666666667,
+      "accuracy": 0.5333333333333333
+    },
+    "Morus Alba": {
+      "class_id": 190,
+      "total_samples": 30,
+      "errors": 15,
+      "error_rate": 0.5,
+      "accuracy": 0.5
+    },
+    "Ailanthus excelsa": {
+      "class_id": 192,
+      "total_samples": 134,
+      "errors": 45,
+      "error_rate": 0.3358208955223881,
+      "accuracy": 0.664179104477612
+    },
+    "saraca asoca": {
+      "class_id": 193,
+      "total_samples": 36,
+      "errors": 16,
+      "error_rate": 0.4444444444444444,
+      "accuracy": 0.5555555555555556
+    },
+    "prosopis juliflora": {
+      "class_id": 194,
+      "total_samples": 50,
+      "errors": 17,
+      "error_rate": 0.34,
+      "accuracy": 0.6599999999999999
+    },
+    "Eucalyptus tereticornis": {
+      "class_id": 195,
+      "total_samples": 5,
+      "errors": 2,
+      "error_rate": 0.4,
+      "accuracy": 0.6
+    }
+  }
+}

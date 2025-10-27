@@ -1,0 +1,21 @@
+true_class,predicted_class,true_class_id,predicted_class_id,count
+Vachellia nilotica,Senegalia senegal,176,154,35
+Vachellia nilotica,Azadirachta indica,176,23,22
+Prosopis cineraria,Azadirachta indica,146,23,20
+Prosopis cineraria,Senegalia senegal,146,154,18
+Ailanthus excelsa,Azadirachta indica,192,23,18
+Ailanthus excelsa,Senegalia senegal,192,154,15
+saraca asoca,Azadirachta indica,193,23,13
+Azadirachta indica,Senegalia senegal,23,154,13
+Azadirachta indica,Morus Alba,23,190,10
+Azadirachta indica,Boswellia serrata,23,34,8
+Azadirachta indica,no tree,23,186,8
+Ailanthus excelsa,no tree,192,186,7
+Azadirachta indica,Vachellia nilotica,23,176,7
+Azadirachta indica,Melia azedarach,23,125,7
+Dalbergia sissoo,Senegalia senegal,72,154,6
+Vachellia nilotica,prosopis juliflora,176,194,6
+Ailanthus excelsa,Boswellia serrata,192,34,6
+Ailanthus excelsa,Moringa oleifera,192,129,6
+Prosopis cineraria,Morus Alba,146,190,6
+Prosopis cineraria,Vachellia nilotica,146,176,6

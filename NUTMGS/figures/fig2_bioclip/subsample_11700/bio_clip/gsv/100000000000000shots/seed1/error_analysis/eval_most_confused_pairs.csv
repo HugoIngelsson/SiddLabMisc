@@ -1,0 +1,21 @@
+true_class,predicted_class,true_class_id,predicted_class_id,count
+Prosopis cineraria,Vachellia nilotica,146,176,32
+Azadirachta indica,Vachellia nilotica,23,176,31
+Ailanthus excelsa,Azadirachta indica,192,23,30
+Vachellia nilotica,Azadirachta indica,176,23,27
+Prosopis cineraria,Azadirachta indica,146,23,22
+Dalbergia sissoo,Azadirachta indica,72,23,18
+Azadirachta indica,Prosopis cineraria,23,146,12
+Mangifera indica,Azadirachta indica,123,23,11
+Azadirachta indica,Ailanthus excelsa,23,192,11
+prosopis juliflora,Vachellia nilotica,194,176,10
+Vachellia nilotica,Prosopis cineraria,176,146,10
+Aegle Marmelos,Azadirachta indica,189,23,9
+Vachellia nilotica,Ailanthus excelsa,176,192,8
+Moringa oleifera,Azadirachta indica,129,23,7
+Albizia procera,Azadirachta indica,9,23,6
+Ailanthus excelsa,Vachellia nilotica,192,176,6
+Vachellia nilotica,prosopis juliflora,176,194,6
+saraca asoca,Azadirachta indica,193,23,5
+Morus Alba,Vachellia nilotica,190,176,5
+Azadirachta indica,prosopis juliflora,23,194,5

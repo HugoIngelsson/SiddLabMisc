@@ -1,0 +1,556 @@
+{
+  "merge_timestamp": "2025-07-27T17:19:53.409648",
+  "merge_statistics": {
+    "locations_skipped": 9764,
+    "locations_replaced": 4330,
+    "total_unique_locations": 28548,
+    "total_unique_images": 54105,
+    "images_copied": 52197,
+    "sentinel_pixels_copied": 52560,
+    "skysat_crops_copied": 52189
+  },
+  "district_overlaps": [
+    {
+      "district": "Jaipur",
+      "appears_in": [
+        "Rajasthan_Zones_v4_resampled",
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv",
+        "rajasthan_top_60_gsv",
+        "rajasthan_top_70_gsv"
+      ],
+      "location_counts": {
+        "Rajasthan_Zones_v4_resampled": 961,
+        "rajasthan_top_10_gsv_v2": 730,
+        "rajasthan_top_20_gsv": 554,
+        "rajasthan_top_30_gsv": 761,
+        "rajasthan_top_40_gsv": 635,
+        "rajasthan_top_50_gsv": 671,
+        "rajasthan_top_60_gsv": 42,
+        "rajasthan_top_70_gsv": 141
+      },
+      "total_locations": 4495
+    },
+    {
+      "district": "Pali",
+      "appears_in": [
+        "Rajasthan_Zones_v4_resampled",
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv"
+      ],
+      "location_counts": {
+        "Rajasthan_Zones_v4_resampled": 197,
+        "rajasthan_top_10_gsv_v2": 1729,
+        "rajasthan_top_20_gsv": 570,
+        "rajasthan_top_30_gsv": 369
+      },
+      "total_locations": 2865
+    },
+    {
+      "district": "Nagaur",
+      "appears_in": [
+        "Rajasthan_Zones_v4_resampled",
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv",
+        "rajasthan_top_60_gsv",
+        "rajasthan_top_70_gsv"
+      ],
+      "location_counts": {
+        "Rajasthan_Zones_v4_resampled": 126,
+        "rajasthan_top_10_gsv_v2": 234,
+        "rajasthan_top_20_gsv": 100,
+        "rajasthan_top_30_gsv": 199,
+        "rajasthan_top_40_gsv": 248,
+        "rajasthan_top_50_gsv": 156,
+        "rajasthan_top_60_gsv": 174,
+        "rajasthan_top_70_gsv": 213
+      },
+      "total_locations": 1450
+    },
+    {
+      "district": "Sikar",
+      "appears_in": [
+        "Rajasthan_Zones_v4_resampled",
+        "rajasthan_comprehensive_dataset_part_8"
+      ],
+      "location_counts": {
+        "Rajasthan_Zones_v4_resampled": 1433,
+        "rajasthan_comprehensive_dataset_part_8": 3926
+      },
+      "total_locations": 5359
+    },
+    {
+      "district": "Alwar",
+      "appears_in": [
+        "Rajasthan_Zones_v4_resampled",
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv",
+        "rajasthan_top_60_gsv",
+        "rajasthan_top_70_gsv"
+      ],
+      "location_counts": {
+        "Rajasthan_Zones_v4_resampled": 56,
+        "rajasthan_top_10_gsv_v2": 359,
+        "rajasthan_top_20_gsv": 358,
+        "rajasthan_top_30_gsv": 297,
+        "rajasthan_top_40_gsv": 276,
+        "rajasthan_top_50_gsv": 828,
+        "rajasthan_top_60_gsv": 1273,
+        "rajasthan_top_70_gsv": 923
+      },
+      "total_locations": 4370
+    },
+    {
+      "district": "Bundi",
+      "appears_in": [
+        "Rajasthan_Zones_v4_resampled",
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv"
+      ],
+      "location_counts": {
+        "Rajasthan_Zones_v4_resampled": 6,
+        "rajasthan_top_10_gsv_v2": 577,
+        "rajasthan_top_20_gsv": 82
+      },
+      "total_locations": 665
+    },
+    {
+      "district": "Barmer",
+      "appears_in": [
+        "rajasthan_comprehensive_dataset_part_8",
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv",
+        "rajasthan_top_60_gsv",
+        "rajasthan_top_70_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_comprehensive_dataset_part_8": 155,
+        "rajasthan_top_10_gsv_v2": 14,
+        "rajasthan_top_20_gsv": 37,
+        "rajasthan_top_30_gsv": 48,
+        "rajasthan_top_40_gsv": 24,
+        "rajasthan_top_50_gsv": 15,
+        "rajasthan_top_60_gsv": 65,
+        "rajasthan_top_70_gsv": 91
+      },
+      "total_locations": 449
+    },
+    {
+      "district": "Kotputli-Behror",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv",
+        "rajasthan_top_60_gsv",
+        "rajasthan_top_70_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 139,
+        "rajasthan_top_20_gsv": 44,
+        "rajasthan_top_30_gsv": 81,
+        "rajasthan_top_40_gsv": 106,
+        "rajasthan_top_50_gsv": 200,
+        "rajasthan_top_60_gsv": 153,
+        "rajasthan_top_70_gsv": 177
+      },
+      "total_locations": 900
+    },
+    {
+      "district": "Jalore",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 161,
+        "rajasthan_top_20_gsv": 196,
+        "rajasthan_top_30_gsv": 199,
+        "rajasthan_top_40_gsv": 295,
+        "rajasthan_top_50_gsv": 172
+      },
+      "total_locations": 1023
+    },
+    {
+      "district": "Karauli",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 231,
+        "rajasthan_top_20_gsv": 20
+      },
+      "total_locations": 251
+    },
+    {
+      "district": "Bhilwara",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv",
+        "rajasthan_top_60_gsv",
+        "rajasthan_top_70_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 719,
+        "rajasthan_top_20_gsv": 856,
+        "rajasthan_top_30_gsv": 645,
+        "rajasthan_top_40_gsv": 1130,
+        "rajasthan_top_50_gsv": 1064,
+        "rajasthan_top_60_gsv": 897,
+        "rajasthan_top_70_gsv": 1110
+      },
+      "total_locations": 6421
+    },
+    {
+      "district": "Kota",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv",
+        "rajasthan_top_60_gsv",
+        "rajasthan_top_70_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 455,
+        "rajasthan_top_20_gsv": 446,
+        "rajasthan_top_30_gsv": 254,
+        "rajasthan_top_40_gsv": 99,
+        "rajasthan_top_50_gsv": 108,
+        "rajasthan_top_60_gsv": 7,
+        "rajasthan_top_70_gsv": 22
+      },
+      "total_locations": 1391
+    },
+    {
+      "district": "Churu",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv",
+        "rajasthan_top_60_gsv",
+        "rajasthan_top_70_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 52,
+        "rajasthan_top_20_gsv": 64,
+        "rajasthan_top_30_gsv": 84,
+        "rajasthan_top_40_gsv": 165,
+        "rajasthan_top_50_gsv": 192,
+        "rajasthan_top_60_gsv": 55,
+        "rajasthan_top_70_gsv": 249
+      },
+      "total_locations": 861
+    },
+    {
+      "district": "Deeg",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv",
+        "rajasthan_top_60_gsv",
+        "rajasthan_top_70_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 140,
+        "rajasthan_top_20_gsv": 129,
+        "rajasthan_top_30_gsv": 234,
+        "rajasthan_top_40_gsv": 286,
+        "rajasthan_top_50_gsv": 261,
+        "rajasthan_top_60_gsv": 123,
+        "rajasthan_top_70_gsv": 20
+      },
+      "total_locations": 1193
+    },
+    {
+      "district": "Tonk",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 482,
+        "rajasthan_top_20_gsv": 444,
+        "rajasthan_top_30_gsv": 23
+      },
+      "total_locations": 949
+    },
+    {
+      "district": "Dausa",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 169,
+        "rajasthan_top_20_gsv": 251,
+        "rajasthan_top_30_gsv": 173,
+        "rajasthan_top_40_gsv": 255,
+        "rajasthan_top_50_gsv": 84
+      },
+      "total_locations": 932
+    },
+    {
+      "district": "Pratapgarh",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 314,
+        "rajasthan_top_20_gsv": 16
+      },
+      "total_locations": 330
+    },
+    {
+      "district": "Phalodi",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv",
+        "rajasthan_top_60_gsv",
+        "rajasthan_top_70_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 40,
+        "rajasthan_top_20_gsv": 61,
+        "rajasthan_top_30_gsv": 68,
+        "rajasthan_top_40_gsv": 46,
+        "rajasthan_top_50_gsv": 69,
+        "rajasthan_top_60_gsv": 48,
+        "rajasthan_top_70_gsv": 104
+      },
+      "total_locations": 436
+    },
+    {
+      "district": "Chittorgarh",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv",
+        "rajasthan_top_60_gsv",
+        "rajasthan_top_70_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 327,
+        "rajasthan_top_20_gsv": 386,
+        "rajasthan_top_30_gsv": 551,
+        "rajasthan_top_40_gsv": 187,
+        "rajasthan_top_50_gsv": 425,
+        "rajasthan_top_60_gsv": 308,
+        "rajasthan_top_70_gsv": 185
+      },
+      "total_locations": 2369
+    },
+    {
+      "district": "Balotra",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 153,
+        "rajasthan_top_20_gsv": 41,
+        "rajasthan_top_30_gsv": 186,
+        "rajasthan_top_40_gsv": 74,
+        "rajasthan_top_50_gsv": 138
+      },
+      "total_locations": 592
+    },
+    {
+      "district": "Jodhpur",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv",
+        "rajasthan_top_60_gsv",
+        "rajasthan_top_70_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 84,
+        "rajasthan_top_20_gsv": 27,
+        "rajasthan_top_30_gsv": 11,
+        "rajasthan_top_40_gsv": 40,
+        "rajasthan_top_50_gsv": 6,
+        "rajasthan_top_60_gsv": 62,
+        "rajasthan_top_70_gsv": 23
+      },
+      "total_locations": 253
+    },
+    {
+      "district": "Bikaner",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv",
+        "rajasthan_top_60_gsv",
+        "rajasthan_top_70_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 102,
+        "rajasthan_top_20_gsv": 290,
+        "rajasthan_top_30_gsv": 210,
+        "rajasthan_top_40_gsv": 119,
+        "rajasthan_top_50_gsv": 124,
+        "rajasthan_top_60_gsv": 239,
+        "rajasthan_top_70_gsv": 64
+      },
+      "total_locations": 1148
+    },
+    {
+      "district": "Jaisalmer",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv",
+        "rajasthan_top_60_gsv",
+        "rajasthan_top_70_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 8,
+        "rajasthan_top_20_gsv": 4,
+        "rajasthan_top_30_gsv": 1,
+        "rajasthan_top_40_gsv": 5,
+        "rajasthan_top_50_gsv": 4,
+        "rajasthan_top_60_gsv": 7,
+        "rajasthan_top_70_gsv": 1
+      },
+      "total_locations": 30
+    },
+    {
+      "district": "Udaipur",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv",
+        "rajasthan_top_60_gsv",
+        "rajasthan_top_70_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 88,
+        "rajasthan_top_20_gsv": 180,
+        "rajasthan_top_30_gsv": 30,
+        "rajasthan_top_40_gsv": 161,
+        "rajasthan_top_50_gsv": 199,
+        "rajasthan_top_60_gsv": 198,
+        "rajasthan_top_70_gsv": 80
+      },
+      "total_locations": 936
+    },
+    {
+      "district": "Sawai Madhopur",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv",
+        "rajasthan_top_60_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 75,
+        "rajasthan_top_20_gsv": 69,
+        "rajasthan_top_30_gsv": 76,
+        "rajasthan_top_40_gsv": 69,
+        "rajasthan_top_50_gsv": 49,
+        "rajasthan_top_60_gsv": 58
+      },
+      "total_locations": 396
+    },
+    {
+      "district": "Hanumangarh",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv",
+        "rajasthan_top_60_gsv",
+        "rajasthan_top_70_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 118,
+        "rajasthan_top_20_gsv": 143,
+        "rajasthan_top_30_gsv": 89,
+        "rajasthan_top_40_gsv": 95,
+        "rajasthan_top_50_gsv": 75,
+        "rajasthan_top_60_gsv": 180,
+        "rajasthan_top_70_gsv": 180
+      },
+      "total_locations": 880
+    },
+    {
+      "district": "Bharatpur",
+      "appears_in": [
+        "rajasthan_top_10_gsv_v2",
+        "rajasthan_top_20_gsv",
+        "rajasthan_top_30_gsv",
+        "rajasthan_top_40_gsv",
+        "rajasthan_top_50_gsv",
+        "rajasthan_top_60_gsv",
+        "rajasthan_top_70_gsv"
+      ],
+      "location_counts": {
+        "rajasthan_top_10_gsv_v2": 68,
+        "rajasthan_top_20_gsv": 123,
+        "rajasthan_top_30_gsv": 94,
+        "rajasthan_top_40_gsv": 64,
+        "rajasthan_top_50_gsv": 184,
+        "rajasthan_top_60_gsv": 163,
+        "rajasthan_top_70_gsv": 98
+      },
+      "total_locations": 794
+    }
+  ],
+  "category_distribution": {
+    "high_density_near": 0,
+    "high_density_far": 0,
+    "low_density_near": 0,
+    "low_density_far": 0
+  }
+}

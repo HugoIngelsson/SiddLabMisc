@@ -1,0 +1,3 @@
+sample_index,filename,true_label,predicted_label,correct,confidence,true_class_probability,predicted_class_probability
+74,tree_Sikar_Sikar_9_87_low_density_near_center_0_20250528_085002_179105.jpg,181,176,False,0.9586495161056519,0.00024987419601529837,0.9586495161056519
+592,tree_Jaipur_Jaipur_44_122_low_density_near_west_0_20250526_102343_127415.jpg,181,194,False,0.365550696849823,0.007977140136063099,0.365550696849823

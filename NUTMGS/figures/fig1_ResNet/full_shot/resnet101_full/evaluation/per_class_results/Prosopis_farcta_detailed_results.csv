@@ -1,0 +1,2 @@
+sample_index,filename,true_label,predicted_label,correct,confidence,true_class_probability,predicted_class_probability
+726,tree_Kota_Kota_5_1012_low_density_near_northwest_0_20250712_080551_021864.jpg,147,23,False,0.2986556589603424,0.000245862320298329,0.2986556589603424

@@ -1,0 +1,54 @@
+*RAJASTHAN*
+ARID WESTERN PLAIN AND HYPER ARID PARTIAL IRRIGATED: 2076
+IRRIGATED NORTH WESTERN PLAIN: 295
+TRANSITIONAL PLAIN ZONE OF ISLAND DRAINAGE: 567
+TRANSITIONAL PLAIN ZONE OF LUNI BASIN: 0
+SEMI ARID EASTERN PLAIN: 0
+FLOOD PRONE EASTERN PLAIN: 311
+SUB HUMID SOUTHERN PLAIN AND ALLUVIAL HILL: 637
+SOUTHERN HUMID PLAIN: 91
+SOUTH EASTERN HUMID PLAIN: 220
+
+~Notes: These zones are based off the names of the directories 
+ in CVAT since I don't have the original data. If these don't 
+ align with what you've collected beforehand, odds are what you 
+ have before is more accurate.
+
+*KARNATAKA*
+NORTH EAST TRANSITION: 0
+NORTH EAST DRY: 1544
+NORTHERN DRY: 588
+CENTRAL DRY: 1882
+EASTERN DRY: 1286
+SOUTHERN DRY: 467
+SOUTHERN TRANSITION: 1264
+WESTERN TRANSITION: 414
+HILL: 178
+COASTAL: 917
+
+~Notes: Bidar, the only district in NORTH EAST TRANSITION, 
+ doesn't have any SkySat data, hence why that zone has zero TIFs. 
+ Also, these are the stats *before* annotations since individual 
+ .tiff files don't maintain the location data. I could probably 
+ find exactly which .tiff files had annotations and match them 
+ with their locations, but it would take a while so I didn't do 
+ that for now.
+
+*CALIFORNIA*
+5b: 24
+6a: 1082
+6b: 1079
+7a: 1204
+7b: 970
+8a: 1115
+8b: 1042
+9a: 1080
+9b: 1122
+10a: 1152
+10b: 885
+11a: 20
+
+~Notes: I filtered to only get the zones with the top 10 most area 
+ in California (there are also zones 4b, 5a, 5b, 11a, 11b that I could 
+ easily get if necessary), but some of the images I downloaded overlap 
+ with neighboring zones, hence why zones 5b and 11a also have some data.

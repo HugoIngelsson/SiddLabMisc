@@ -1,0 +1,2 @@
+sample_index,skysat_filename,true_label,predicted_label,correct,confidence,true_class_probability,predicted_class_probability
+185,tree_Sikar_Sikar_48_74_low_density_far_southeast_0_20250528_153307_709925_skysat.jpg,54,23,False,0.25836181640625,0.0005424093105830252,0.25836181640625

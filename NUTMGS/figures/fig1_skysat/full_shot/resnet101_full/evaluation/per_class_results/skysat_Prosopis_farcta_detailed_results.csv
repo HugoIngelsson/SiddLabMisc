@@ -1,0 +1,2 @@
+sample_index,skysat_filename,true_label,predicted_label,correct,confidence,true_class_probability,predicted_class_probability
+726,tree_Kota_Kota_5_1012_low_density_near_northwest_0_20250712_080551_021864_skysat.jpg,147,23,False,0.2558475434780121,0.0006557899760082364,0.2558475434780121

@@ -1,0 +1,2 @@
+sample_index,skysat_filename,true_label,predicted_label,correct,confidence,true_class_probability,predicted_class_probability
+393,tree_Bundi_Bundi_1_1153_low_density_far_north_0_20250712_015602_640818_skysat.jpg,147,176,False,0.4270697832107544,0.00010768135689431801,0.4270697832107544

@@ -1,0 +1,2 @@
+sample_index,filename,true_label,predicted_label,correct,confidence,true_class_probability,predicted_class_probability
+868,tree_Bhilwara_Bhilwara_34_56_low_density_near_north_0_20250713_075439_163530.jpg,43,43,True,0.5677974820137024,0.5677974820137024,0.5677974820137024

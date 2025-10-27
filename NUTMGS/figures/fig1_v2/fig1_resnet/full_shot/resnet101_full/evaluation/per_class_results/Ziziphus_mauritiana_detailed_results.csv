@@ -1,0 +1,3 @@
+sample_index,filename,true_label,predicted_label,correct,confidence,true_class_probability,predicted_class_probability
+687,tree_Pali_Pali_13_231_low_density_near_west_0_20250712_174450_520130.jpg,181,180,False,0.6114472150802612,0.09583982080221176,0.6114472150802612
+842,tree_Pali_Pali_30_34_low_density_near_south_0_20250713_055911_458230.jpg,181,72,False,0.2058202624320984,0.050060663372278214,0.2058202624320984
