@@ -37,7 +37,7 @@ class GeoTiffDataset(RasterDataset):
         
         # Compute the affine transform for this image
         image = sample_dict['image']
-        transform = self.get_transform(sample_dict["bounds"], image.shape[1], image.shape[2])
+        transform = self.get_transform(sample_dict["bbox"], image.shape[1], image.shape[2])
         sample_dict["transform"] = transform
         return sample_dict
     
@@ -143,7 +143,7 @@ def build_hash_to_district_mapping(source_dir, shapefile_path, district_key='Dis
             continue
         
         # Get center point from bounds
-        bds = sample['bounds']
+        bds = sample['bbox']
         pt = Point((bds.minx + bds.maxx) / 2, (bds.miny + bds.maxy) / 2)
         
         # Find district
