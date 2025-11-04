@@ -45,8 +45,10 @@ From: continuumio/miniconda3
         echo "Available scripts:"
         echo "  find_zones       - Classify tiles into agroclimatic zones"
         echo "  zone_analysis    - Analyze zone distribution from CSV files"
+        echo "  rajasthan        - Run hardcoded Rajasthan classification"
         echo ""
         echo "Examples:"
+        echo "  apptainer run --nv zones.sif rajasthan"
         echo "  apptainer run zones.sif find_zones --state karnataka --source-dir ./source/ --shapefile ./districts.shp --tiles-dir ./tiles/ --output zones.csv"
         echo "  apptainer run zones.sif zone_analysis ./images/ ./california.csv ./karnataka.csv ./extra.csv"
         exit 1
@@ -62,12 +64,22 @@ From: continuumio/miniconda3
         zone_analysis)
             python /opt/scripts/zone_analysis_1.py "$@"
             ;;
+        rajasthan)
+            echo "Running hardcoded Rajasthan find_zones..."
+            python /opt/scripts/find_zones.py \
+                --state rajasthan \
+                --source-dir /scratch/groups/dlobell/aadityan/tifs_for_labelling/rajasthan_top_10_tifs/ \
+                --shapefile /scratch/groups/dlobell/aadityan/SiddLabMisc/district_shapefiles/2011_Dist.shp \
+                --tiles-dir /scratch/groups/dlobell/aadityan/rajasthanzonedataset/Images/ \
+                --output rajasthan_final_zones.csv
+            ;;
         *)
             echo "Error: Unknown script '$SCRIPT_NAME'"
             echo ""
             echo "Available scripts:"
             echo "  find_zones       - Classify tiles into agroclimatic zones"
             echo "  zone_analysis    - Analyze zone distribution from CSV files"
+            echo "  rajasthan        - Run hardcoded Rajasthan classification"
             exit 1
             ;;
     esac
