@@ -4,7 +4,7 @@ From: continuumio/miniconda3
 %post
     conda init
     # Create envs and install packages
-    conda create --name myenv python=3.11 pandas "numpy<2"
+    conda create --name myenv python=3.9 pandas "numpy<2"
     
     . /opt/conda/etc/profile.d/conda.sh
     conda activate myenv
@@ -18,10 +18,10 @@ From: continuumio/miniconda3
     conda install -c conda-forge pyproj --no-update-deps -y
     conda install -c conda-forge geopandas --no-update-deps -y
     conda install pytorch=1.13.1 torchvision=0.14.1 cpuonly -c pytorch --no-update-deps -y
+    conda install -c conda-forge opencv --no-update-deps -y
 
     pip install --no-cache-dir torchgeo
     pip install --no-cache-dir imagehash
-    pip install --no-cache-dir opencv-python-headless
     pip install --no-cache-dir Pillow
     
     # some special environment things for singularity
