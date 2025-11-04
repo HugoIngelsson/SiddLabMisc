@@ -1,0 +1,74 @@
+Bootstrap: docker
+From: continuumio/miniconda3
+
+%post
+    # Update conda
+    conda update -n base -c defaults conda -y
+    
+    # Create environment with Python 3.9 (best compatibility for find_zones.py)
+    conda create --name zones_env python=3.9 -y
+    
+    # Activate environment
+    . /opt/conda/etc/profile.d/conda.sh
+    conda activate zones_env
+    
+    # Install packages that need compilation via conda (pre-compiled binaries)
+    conda install -c conda-forge \
+        libspatialindex \
+        geopandas \
+        rasterio \
+        shapely \
+        rtree \
+        pandas \
+        numpy \
+        matplotlib \
+        -y
+    
+    # Install PyTorch (CPU version for VM)
+    conda install pytorch torchvision cpuonly -c pytorch -y
+    
+    # Install pure Python packages via pip
+    pip install \
+        torchgeo \
+        imagehash \
+        opencv-python-headless
+    
+    # Set up environment for Singularity/Apptainer
+    echo ". /opt/conda/etc/profile.d/conda.sh" >> $SINGULARITY_ENVIRONMENT
+    echo "conda activate zones_env" >> $SINGULARITY_ENVIRONMENT
+
+%files
+    # Copy find_zones.py into the container
+    find_zones.py /opt/find_zones.py
+
+%runscript
+    # Run find_zones.py with arguments passed from command line
+    exec python /opt/find_zones.py "$@"
+
+%help
+    This container runs the find_zones.py script for zone classification.
+    
+    Usage:
+        apptainer run zones.sif --state karnataka --source-dir /path/to/source --shapefile /path/to/shapefile.shp --tiles-dir /path/to/tiles --output output.csv
+    
+    Required arguments:
+        --state              State to process (karnataka or rajasthan)
+        --source-dir         Directory with georeferenced source GeoTIFF files
+        --shapefile          Path to shapefile with district boundaries
+        --tiles-dir          Directory with 400x400 TIF tiles to classify
+        --output             Output CSV file path
+    
+    Optional arguments:
+        --district-key       Column name in shapefile for districts (default: District)
+        --target-crs         Target CRS EPSG code (default: 32643)
+        --patch-size         Patch size for sampling (default: 400)
+        --stride             Stride for sampling (default: 400)
+        --max-hash-distance  Max Hamming distance for fuzzy matching (default: 12)
+    
+    Example:
+        apptainer run zones.sif \
+            --state karnataka \
+            --source-dir ./source_geotiffs \
+            --shapefile ./districts.shp \
+            --tiles-dir ./tiles \
+            --output zones.csv 
