@@ -107,12 +107,42 @@ def build_hash_to_district_mapping(source_dir, shapefile_path, district_key='Dis
     print(f"\nLoading shapefile: {shapefile_path}")
     shapefile_data = gpd.read_file(shapefile_path).to_crs(target_crs)
     
+    # Debug: Print available columns
+    print(f"Available columns in shapefile: {list(shapefile_data.columns)}")
+    
+    # Auto-detect district column (case-insensitive)
+    district_col = None
+    for col in shapefile_data.columns:
+        if col.lower() == district_key.lower():
+            district_col = col
+            break
+    
+    if district_col is None:
+        print(f"\nError: Column '{district_key}' not found in shapefile.")
+        print(f"Available columns: {list(shapefile_data.columns)}")
+        sys.exit(1)
+    
+    print(f"Using district column: '{district_col}'")
+    
     # Filter by state if specified
-    if state_filter and state_key in shapefile_data.columns:
-        shapefile_data = shapefile_data[shapefile_data[state_key] == state_filter]
-        print(f"Filtered to state: {state_filter}")
+    if state_filter:
+        # Auto-detect state column (case-insensitive)
+        state_col = None
+        for col in shapefile_data.columns:
+            if col.lower() == state_key.lower():
+                state_col = col
+                break
+        
+        if state_col:
+            shapefile_data = shapefile_data[shapefile_data[state_col] == state_filter]
+            print(f"Filtered to state: {state_filter} (using column '{state_col}')")
+        else:
+            print(f"Warning: State column '{state_key}' not found. Processing all districts.")
     
     print(f"Loaded {len(shapefile_data)} districts")
+    
+    # Update district_key to use the detected column name
+    district_key = district_col
     
     # Sample patches and build hash mapping
     print(f"\nSampling {patch_size}x{patch_size} patches (stride={stride})...")
