@@ -2,47 +2,61 @@ Bootstrap: docker
 From: continuumio/miniconda3
 
 %post
-    # Set conda to use less memory during solving
+    # Install mamba for faster, more memory-efficient solving
+    conda install -n base conda-libmamba-solver -y
     conda config --set solver libmamba
     
-    # Update conda
-    conda update -n base -c defaults conda -y
-    
-    # Create environment with Python 3.9 (best compatibility for find_zones.py)
-    conda create --name zones_env python=3.9 -y
+    # Create environment with Python 3.9 and essential packages in one go
+    # This avoids multiple dependency resolutions
+    conda create --name zones_env python=3.9 numpy -y
     
     # Activate environment
     . /opt/conda/etc/profile.d/conda.sh
     conda activate zones_env
     
-    # Install packages one at a time to avoid OOM during dependency resolution
+    # Install packages one at a time with minimal dependencies
+    echo "Installing libspatialindex..."
+    conda install -c conda-forge libspatialindex --no-update-deps -y
     
-    # Core spatial library
-    conda install -c conda-forge libspatialindex -y
+    echo "Installing pandas..."
+    conda install -c conda-forge pandas --no-update-deps -y
     
-    # Basic packages
-    conda install -c conda-forge numpy -y
-    conda install -c conda-forge pandas -y
-    conda install -c conda-forge matplotlib -y
+    echo "Installing matplotlib..."
+    conda install -c conda-forge matplotlib --no-update-deps -y
     
-    # Geospatial foundation
-    conda install -c conda-forge shapely -y
-    conda install -c conda-forge rtree -y
+    echo "Installing shapely..."
+    conda install -c conda-forge shapely --no-update-deps -y
     
-    # Rasterio (heavy package, install separately)
-    conda install -c conda-forge rasterio -y
+    echo "Installing rtree..."
+    conda install -c conda-forge rtree --no-update-deps -y
     
-    # Geopandas (depends on above, install last)
-    conda install -c conda-forge geopandas -y
+    echo "Installing GDAL dependencies..."
+    conda install -c conda-forge gdal --no-update-deps -y
     
-    # PyTorch (CPU version for VM)
-    conda install pytorch torchvision cpuonly -c pytorch -y
+    echo "Installing rasterio..."
+    conda install -c conda-forge rasterio --no-update-deps -y
     
-    # Install pure Python packages via pip
-    pip install \
-        torchgeo \
-        imagehash \
-        opencv-python-headless
+    echo "Installing fiona..."
+    conda install -c conda-forge fiona --no-update-deps -y
+    
+    echo "Installing pyproj..."
+    conda install -c conda-forge pyproj --no-update-deps -y
+    
+    echo "Installing geopandas..."
+    conda install -c conda-forge geopandas --no-update-deps -y
+    
+    echo "Installing PyTorch..."
+    conda install pytorch torchvision cpuonly -c pytorch --no-update-deps -y
+    
+    echo "Installing pip packages..."
+    pip install --no-cache-dir torchgeo
+    pip install --no-cache-dir imagehash
+    pip install --no-cache-dir opencv-python-headless
+    pip install --no-cache-dir Pillow
+    
+    # Clean up to reduce image size
+    conda clean -afy
+    pip cache purge
     
     # Set up environment for Singularity/Apptainer
     echo ". /opt/conda/etc/profile.d/conda.sh" >> $SINGULARITY_ENVIRONMENT
