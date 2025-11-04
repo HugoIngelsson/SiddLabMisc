@@ -2,6 +2,9 @@ Bootstrap: docker
 From: continuumio/miniconda3
 
 %post
+    # Set conda to use less memory during solving
+    conda config --set solver libmamba
+    
     # Update conda
     conda update -n base -c defaults conda -y
     
@@ -12,19 +15,18 @@ From: continuumio/miniconda3
     . /opt/conda/etc/profile.d/conda.sh
     conda activate zones_env
     
-    # Install packages that need compilation via conda (pre-compiled binaries)
-    conda install -c conda-forge \
-        libspatialindex \
-        geopandas \
-        rasterio \
-        shapely \
-        rtree \
-        pandas \
-        numpy \
-        matplotlib \
-        -y
+    # Install packages in smaller batches to avoid OOM during dependency resolution
     
-    # Install PyTorch (CPU version for VM)
+    # Batch 1: Core spatial libraries
+    conda install -c conda-forge libspatialindex -y
+    
+    # Batch 2: Basic data science packages
+    conda install -c conda-forge pandas numpy matplotlib -y
+    
+    # Batch 3: Geospatial packages (install together for compatibility)
+    conda install -c conda-forge geopandas rasterio shapely rtree -y
+    
+    # Batch 4: PyTorch (CPU version for VM)
     conda install pytorch torchvision cpuonly -c pytorch -y
     
     # Install pure Python packages via pip
