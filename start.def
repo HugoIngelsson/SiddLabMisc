@@ -17,7 +17,7 @@ From: continuumio/miniconda3
     conda install -c conda-forge fiona --no-update-deps -y
     conda install -c conda-forge pyproj --no-update-deps -y
     conda install -c conda-forge geopandas --no-update-deps -y
-    conda install pytorch=1.13.1 torchvision=0.14.1 cpuonly -c pytorch --no-update-deps -y
+    conda install pytorch=1.13.1 torchvision=0.14.1 -c pytorch --no-update-deps -y
     pip install --no-cache-dir "opencv-python-headless<4.9"
     pip install --no-cache-dir torchgeo
     pip install --no-cache-dir imagehash

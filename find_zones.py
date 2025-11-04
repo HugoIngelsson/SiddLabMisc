@@ -21,6 +21,15 @@ from torchgeo.datasets import RasterDataset, stack_samples, unbind_samples
 from torchgeo.samplers import GridGeoSampler
 from rasterio.transform import from_bounds
 
+# GPU setup
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+if torch.cuda.is_available():
+    torch.cuda.set_device(0)
+    print(f"GPU detected: {torch.cuda.get_device_name(0)}")
+    print(f"Using device: {device}")
+else:
+    print(f"No GPU detected, using CPU")
+
 
 class GeoTiffDataset(RasterDataset):
     """Custom TorchGeo dataset for loading georeferenced GeoTIFF files."""
@@ -148,7 +157,8 @@ def build_hash_to_district_mapping(source_dir, shapefile_path, district_key='Dis
     print(f"\nSampling {patch_size}x{patch_size} patches (stride={stride})...")
     torch.manual_seed(3)
     sampler = GridGeoSampler(dataset, size=patch_size, stride=stride)
-    dataloader = DataLoader(dataset, sampler=sampler, collate_fn=stack_samples)
+    dataloader = DataLoader(dataset, sampler=sampler, collate_fn=stack_samples,
+                           num_workers=4, pin_memory=True)
     
     hash_to_district = {}
     total_patches = 0
