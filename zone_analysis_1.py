@@ -32,12 +32,11 @@ def load_csv_mappings(csv_paths):
     return mappings
 
 
-def analyze_zones(image_dir, california_csv, karnataka_csv, extra_karnataka_csv):
+def analyze_zones(image_dir, csv_files):
     """Analyze zone distribution from image directory and CSV files."""
     
     # Load all CSV mappings
     print("\n=== Loading CSV Files ===")
-    csv_files = [california_csv, karnataka_csv, extra_karnataka_csv]
     mappings = load_csv_mappings(csv_files)
     print(f"Total mappings loaded: {len(mappings)}")
     
@@ -165,26 +164,31 @@ def create_bar_charts(karnataka_zones, california_zones):
 def main():
     """Main function to run the analysis."""
     
-    if len(sys.argv) != 5:
-        print("Usage: python zone_analysis_1.py <image_dir> <california_csv> <karnataka_csv> <extra_karnataka_csv>")
-        print("\nExample:")
-        print("  python zone_analysis_1.py ./images ./california_image_zones.csv ./karnataka_image_zones.csv ./extra_karnataka_image_zones.csv")
+    if len(sys.argv) < 3:
+        print("Usage: python zone_analysis_1.py <image_dir> <csv_file1> [csv_file2] [csv_file3] ...")
+        print("\nExamples:")
+        print("  # Single CSV file")
+        print("  python zone_analysis_1.py ./images ./karnataka_zones.csv")
+        print("")
+        print("  # Multiple CSV files")
+        print("  python zone_analysis_1.py ./images ./california_zones.csv ./karnataka_zones.csv")
+        print("")
+        print("  # Three CSV files")
+        print("  python zone_analysis_1.py ./images ./california_zones.csv ./karnataka_zones.csv ./extra_zones.csv")
         sys.exit(1)
     
     image_dir = sys.argv[1]
-    california_csv = sys.argv[2]
-    karnataka_csv = sys.argv[3]
-    extra_karnataka_csv = sys.argv[4]
+    csv_files = sys.argv[2:]  # All remaining arguments are CSV files
     
     print("=" * 60)
     print("Zone Analysis Script")
     print("=" * 60)
     print(f"Image directory: {image_dir}")
-    print(f"California CSV: {california_csv}")
-    print(f"Karnataka CSV: {karnataka_csv}")
-    print(f"Extra Karnataka CSV: {extra_karnataka_csv}")
+    print(f"CSV files ({len(csv_files)}):")
+    for i, csv_file in enumerate(csv_files, 1):
+        print(f"  {i}. {csv_file}")
     
-    analyze_zones(image_dir, california_csv, karnataka_csv, extra_karnataka_csv)
+    analyze_zones(image_dir, csv_files)
 
 
 if __name__ == "__main__":
