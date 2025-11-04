@@ -15,18 +15,27 @@ From: continuumio/miniconda3
     . /opt/conda/etc/profile.d/conda.sh
     conda activate zones_env
     
-    # Install packages in smaller batches to avoid OOM during dependency resolution
+    # Install packages one at a time to avoid OOM during dependency resolution
     
-    # Batch 1: Core spatial libraries
+    # Core spatial library
     conda install -c conda-forge libspatialindex -y
     
-    # Batch 2: Basic data science packages
-    conda install -c conda-forge pandas numpy matplotlib -y
+    # Basic packages
+    conda install -c conda-forge numpy -y
+    conda install -c conda-forge pandas -y
+    conda install -c conda-forge matplotlib -y
     
-    # Batch 3: Geospatial packages (install together for compatibility)
-    conda install -c conda-forge geopandas rasterio shapely rtree -y
+    # Geospatial foundation
+    conda install -c conda-forge shapely -y
+    conda install -c conda-forge rtree -y
     
-    # Batch 4: PyTorch (CPU version for VM)
+    # Rasterio (heavy package, install separately)
+    conda install -c conda-forge rasterio -y
+    
+    # Geopandas (depends on above, install last)
+    conda install -c conda-forge geopandas -y
+    
+    # PyTorch (CPU version for VM)
     conda install pytorch torchvision cpuonly -c pytorch -y
     
     # Install pure Python packages via pip
