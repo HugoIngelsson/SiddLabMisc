@@ -16,10 +16,9 @@ From: continuumio/miniconda3
     conda install -c conda-forge rasterio --no-update-deps -y
     conda install -c conda-forge fiona --no-update-deps -y
     conda install -c conda-forge pyproj --no-update-deps -y
+    conda install -c conda-forge geopandas --no-update-deps -y
     conda install pytorch=1.13.1 torchvision=0.14.1 -c pytorch --no-update-deps -y
-
-    # Install geopandas via pip to avoid conda OOM
-    pip install --no-cache-dir "geopandas"
+    conda install -c conda-forge matplotlib --no-update-deps -y
     pip install --no-cache-dir "opencv-python-headless<4.9"
     pip install --no-cache-dir torchgeo
     pip install --no-cache-dir imagehash
@@ -29,6 +28,46 @@ From: continuumio/miniconda3
     echo ". /opt/conda/etc/profile.d/conda.sh" >> $SINGULARITY_ENVIRONMENT
     echo "conda activate myenv" >> $SINGULARITY_ENVIRONMENT
 
+%files
+    find_zones.py /opt/scripts/find_zones.py
+    zone_analysis_1.py /opt/scripts/zone_analysis_1.py
+
 %runscript
-    echo "Running Python script"
-    python find_zones.py --state karnataka --source-dir ../tifs_for_labeling/karnataka_top_10_tifs/ --shapefile ./district_shapefiles/2011_Dist.shp --tiles-dir ../new_karnataka_california_cvat/kejri_trees_karnataka/images/default/ --output karnataka_final_zones.csv
+    #!/bin/bash
+    # Flexible runscript that accepts command-line arguments
+    # Usage: apptainer run zones.sif <script_name> [args...]
+    
+    if [ $# -eq 0 ]; then
+        echo "Error: No script specified"
+        echo ""
+        echo "Usage: apptainer run zones.sif <script_name> [args...]"
+        echo ""
+        echo "Available scripts:"
+        echo "  find_zones       - Classify tiles into agroclimatic zones"
+        echo "  zone_analysis    - Analyze zone distribution from CSV files"
+        echo ""
+        echo "Examples:"
+        echo "  apptainer run zones.sif find_zones --state karnataka --source-dir ./source/ --shapefile ./districts.shp --tiles-dir ./tiles/ --output zones.csv"
+        echo "  apptainer run zones.sif zone_analysis ./images/ ./california.csv ./karnataka.csv ./extra.csv"
+        exit 1
+    fi
+    
+    SCRIPT_NAME=$1
+    shift  # Remove script name from arguments
+    
+    case "$SCRIPT_NAME" in
+        find_zones)
+            python /opt/scripts/find_zones.py "$@"
+            ;;
+        zone_analysis)
+            python /opt/scripts/zone_analysis_1.py "$@"
+            ;;
+        *)
+            echo "Error: Unknown script '$SCRIPT_NAME'"
+            echo ""
+            echo "Available scripts:"
+            echo "  find_zones       - Classify tiles into agroclimatic zones"
+            echo "  zone_analysis    - Analyze zone distribution from CSV files"
+            exit 1
+            ;;
+    esac

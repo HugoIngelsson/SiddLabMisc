@@ -107,106 +107,58 @@ def main():
         for district in sorted(matches):
             print(f"  - '{district}'")
     
-    # Filter for Karnataka districts only (case-insensitive)
-    karnataka_districts = []
+    # Filter for Karnataka districts only
     if 'ST_NM' in shapefile_data.columns:
-        # Try different possible spellings for Karnataka
-        karnataka_variants = ['KARNATAKA', 'KARNATAKA', 'KARNATAKA ', ' Karnataka']
-        karnataka_data = None
+        karnataka_data = shapefile_data[shapefile_data['ST_NM'] == 'KARNATAKA']
+        karnataka_districts = sorted(karnataka_data['DISTRICT'].unique())
         
-        for variant in karnataka_variants:
-            filtered = shapefile_data[shapefile_data['ST_NM'] == variant]
-            if len(filtered) > 0:
-                karnataka_data = filtered
-                print(f"\n✅ Found Karnataka districts using state name: '{variant}'")
-                break
+        print(f"\n📍 Karnataka districts in shapefile ({len(karnataka_districts)}):")
+        print("-" * 60)
         
-        if karnataka_data is not None:
-            karnataka_districts = sorted(karnataka_data['DISTRICT'].unique())
-        else:
-            print(f"\n⚠️  Karnataka not found. Showing all districts instead.")
-            karnataka_districts = districts
-    else:
-        print(f"\n⚠️  No state column found. Showing all districts.")
-        karnataka_districts = districts
-    
-    print(f"\n📍 Districts to compare ({len(karnataka_districts)}):")
-    print("-" * 60)
-    
-    for i, district in enumerate(karnataka_districts, 1):
-        # Check if this district exists in our dictionary (case-insensitive)
-        district_upper = district.upper()
-        found_match = False
-        matched_key = None
-        
-        for dict_key in KARNATAKA_ZONES.keys():
-            if dict_key.upper() == district_upper:
+        for i, district in enumerate(karnataka_districts, 1):
+            # Check if this district exists in our dictionary
+            if district in KARNATAKA_ZONES:
                 status = "✅ MATCH"
-                zone = KARNATAKA_ZONES[dict_key]
-                found_match = True
-                matched_key = dict_key
-                break
-        
-        if not found_match:
-            # Try fuzzy matching for common variations
-            district_clean = district.replace(' ', '').replace('.', '').upper()
-            for dict_key in KARNATAKA_ZONES.keys():
-                dict_clean = dict_key.replace(' ', '').replace('.', '').upper()
-                if district_clean == dict_clean:
-                    status = "🔄 FUZZY"
-                    zone = KARNATAKA_ZONES[dict_key]
-                    found_match = True
-                    matched_key = f"{dict_key} -> {district}"
-                    break
-        
-        if not found_match:
-            status = "❌ MISSING"
-            zone = "NEEDS_MAPPING"
-            matched_key = None
-        
-        if status == "✅ MATCH":
-            print(f"{i:2d}. {district:25s} | {status:10s} | {zone}")
-        elif status == "🔄 FUZZY":
-            print(f"{i:2d}. {district:25s} | {status:10s} | {zone} (dict: {matched_key})")
-        else:
+                zone = KARNATAKA_ZONES[district]
+            else:
+                status = "❌ MISSING"
+                zone = "NEEDS_MAPPING"
+            
             print(f"{i:2d}. {district:25s} | {status:10s} | {zone}")
     
     # Export to CSV
     print(f"\n💾 Exporting results to CSV...")
     
     results = []
-    for district in karnataka_districts:
-        # Check if this district exists in our dictionary (case-insensitive)
-        district_upper = district.upper()
-        found_match = False
-        
-        for dict_key in KARNATAKA_ZONES.keys():
-            if dict_key.upper() == district_upper:
+    if 'ST_NM' in shapefile_data.columns:
+        for district in karnataka_districts:
+            if district in KARNATAKA_ZONES:
                 status = "MATCH"
-                zone = KARNATAKA_ZONES[dict_key]
-                found_match = True
-                break
-        
-        if not found_match:
-            # Try fuzzy matching for common variations
-            district_clean = district.replace(' ', '').replace('.', '').upper()
-            for dict_key in KARNATAKA_ZONES.keys():
-                dict_clean = dict_key.replace(' ', '').replace('.', '').upper()
-                if district_clean == dict_clean:
-                    status = "FUZZY"
-                    zone = KARNATAKA_ZONES[dict_key]
-                    found_match = True
-                    break
-        
-        if not found_match:
-            status = "MISSING"
-            zone = "NEEDS_MAPPING"
-        
-        results.append({
-            'district': district,
-            'status': status,
-            'zone': zone
-        })
+                zone = KARNATAKA_ZONES[district]
+            else:
+                status = "MISSING"
+                zone = "NEEDS_MAPPING"
+            
+            results.append({
+                'district': district,
+                'status': status,
+                'zone': zone
+            })
+    else:
+        # If no state column, use all districts
+        for district in districts:
+            if district in KARNATAKA_ZONES:
+                status = "MATCH"
+                zone = KARNATAKA_ZONES[district]
+            else:
+                status = "MISSING"
+                zone = "NEEDS_MAPPING"
+            
+            results.append({
+                'district': district,
+                'status': status,
+                'zone': zone
+            })
     
     df = pd.DataFrame(results)
     
