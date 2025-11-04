@@ -16,18 +16,32 @@ def load_csv_mappings(csv_paths):
     mappings = {}
     
     for csv_path in csv_paths:
-        if not os.path.exists(csv_path):
-            print(f"Warning: CSV file not found: {csv_path}")
+        # Skip /dev/null or non-existent files
+        if csv_path == '/dev/null' or not os.path.exists(csv_path):
+            if csv_path != '/dev/null':
+                print(f"Warning: CSV file not found: {csv_path}")
+            continue
+        
+        # Skip empty files
+        if os.path.getsize(csv_path) == 0:
+            print(f"Warning: CSV file is empty: {csv_path}")
             continue
             
-        df = pd.read_csv(csv_path)
-        print(f"Loaded {len(df)} mappings from {os.path.basename(csv_path)}")
-        
-        # Add to mappings dictionary
-        for _, row in df.iterrows():
-            filename = row['filename']
-            zone = row['zone']
-            mappings[filename] = zone
+        try:
+            df = pd.read_csv(csv_path)
+            print(f"Loaded {len(df)} mappings from {os.path.basename(csv_path)}")
+            
+            # Add to mappings dictionary
+            for _, row in df.iterrows():
+                filename = row['filename']
+                zone = row['zone']
+                mappings[filename] = zone
+        except pd.errors.EmptyDataError:
+            print(f"Warning: CSV file has no data: {csv_path}")
+            continue
+        except Exception as e:
+            print(f"Warning: Error reading {csv_path}: {e}")
+            continue
     
     return mappings
 
