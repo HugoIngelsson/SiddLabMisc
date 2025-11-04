@@ -4,7 +4,7 @@ From: continuumio/miniconda3
 %post
     conda init
     # Create envs and install packages
-    conda create --name myenv python=3.11 pandas numpy
+    conda create --name myenv python=3.11 pandas "numpy<2"
     
     . /opt/conda/etc/profile.d/conda.sh
     conda activate myenv
