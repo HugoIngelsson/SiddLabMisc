@@ -20,6 +20,8 @@ from torch.utils.data import DataLoader
 from torchgeo.datasets import RasterDataset, stack_samples, unbind_samples
 from torchgeo.samplers import GridGeoSampler
 from rasterio.transform import from_bounds
+from multiprocessing import Pool, cpu_count
+from functools import partial
 
 # GPU setup
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -212,83 +214,132 @@ def build_hash_to_district_mapping(source_dir, shapefile_path, district_key='Dis
     return hash_to_district
 
 
-def classify_tiles(tiles_dir, hash_to_district, district_to_zone, output_csv,
-                   max_hash_distance=12):
+def process_single_tile(filename, tiles_dir, hash_to_district, district_to_zone, max_hash_distance):
     """
-    Phase 2: Classify 400x400 tiles using hash matching.
+    Process a single tile (used for parallel processing).
+    
+    Returns:
+        Tuple of (filename, zone, match_type) where match_type is 'exact', 'fuzzy', 'unknown', or 'error'
+    """
+    if not (filename.endswith('.tif') or filename.endswith('.tiff')):
+        return None
+    
+    filepath = os.path.join(tiles_dir, filename)
+    
+    try:
+        # Load image and compute hash
+        im = cv2.imread(filepath)[:, :, ::-1]  # BGR to RGB
+        hash_val = imagehash.dhash(Image.fromarray(im))
+        
+        # Try exact match first
+        if str(hash_val) in hash_to_district:
+            district = hash_to_district[str(hash_val)]
+            match_type = 'exact'
+        else:
+            # Try fuzzy match
+            best_hash, distance = find_closest_hash(hash_val, hash_to_district, max_hash_distance)
+            if best_hash:
+                district = hash_to_district[best_hash]
+                match_type = 'fuzzy'
+            else:
+                district = None
+                match_type = 'unknown'
+        
+        # Map district to zone
+        if district:
+            if district in district_to_zone:
+                zone = district_to_zone[district]
+            else:
+                zone = 'UNKNOWN'
+        else:
+            zone = 'UNKNOWN'
+        
+        return (filename, zone, match_type)
+        
+    except Exception as e:
+        return (filename, 'ERROR', 'error')
+
+
+def classify_tiles(tiles_dir, hash_to_district, district_to_zone, output_csv, max_hash_distance=5, num_workers=None):
+    """
+    Phase 2: Classify 400x400 tiles by matching their hashes to the hash→district mapping.
+    Uses parallel processing for dramatic speedup.
     
     Args:
         tiles_dir: Directory containing 400x400 TIF tiles to classify
-        hash_to_district: Dictionary mapping hashes to districts
-        district_to_zone: Dictionary mapping districts to zones
+        hash_to_district: Dictionary mapping hash strings to district names
+        district_to_zone: Dictionary mapping district names to zone names
         output_csv: Path to output CSV file
-        max_hash_distance: Maximum Hamming distance for fuzzy matching (default: 12)
+        max_hash_distance: Maximum Hamming distance for fuzzy matching
+        num_workers: Number of parallel workers (default: CPU count)
     
     Returns:
         Dictionary with classification statistics
     """
-    print("\n" + "="*60)
-    print("PHASE 2: Classifying 400x400 Tiles")
-    print("="*60)
+    print(f"\n{'='*60}")
+    print("PHASE 2: CLASSIFYING TILES (PARALLEL)")
+    print(f"{'='*60}")
+    print(f"Tiles directory: {tiles_dir}")
+    print(f"Hash database size: {len(hash_to_district)} entries")
+    print(f"Max hash distance for fuzzy matching: {max_hash_distance}")
     
-    print(f"\nProcessing tiles from: {tiles_dir}")
+    # Determine number of workers
+    if num_workers is None:
+        num_workers = cpu_count()  # Use all available CPUs
+    print(f"Using {num_workers} parallel workers")
     
-    total = 0
+    # Get all tile filenames
+    all_files = [f for f in os.listdir(tiles_dir) 
+                 if f.endswith('.tif') or f.endswith('.tiff')]
+    total = len(all_files)
+    print(f"Found {total} tiles to process")
+    
+    # Process tiles in parallel
+    process_func = partial(process_single_tile, 
+                          tiles_dir=tiles_dir,
+                          hash_to_district=hash_to_district,
+                          district_to_zone=district_to_zone,
+                          max_hash_distance=max_hash_distance)
+    
+    results = []
     exact_matches = 0
     fuzzy_matches = 0
     unknown = 0
+    errors = 0
     zone_counts = {}
     
-    with open(output_csv, 'w') as f:
-        f.write('filename,zone\n')
-        
-        for filename in os.listdir(tiles_dir):
-            if not (filename.endswith('.tif') or filename.endswith('.tiff')):
+    print("\nProcessing tiles...")
+    with Pool(processes=num_workers) as pool:
+        # Process in chunks to show progress
+        chunk_size = 100
+        for i, result in enumerate(pool.imap_unordered(process_func, all_files, chunksize=chunk_size)):
+            if result is None:
                 continue
             
-            filepath = os.path.join(tiles_dir, filename)
-            total += 1
+            filename, zone, match_type = result
+            results.append((filename, zone))
             
-            try:
-                # Load image and compute hash
-                im = cv2.imread(filepath)[:, :, ::-1]  # BGR to RGB
-                hash_val = imagehash.dhash(Image.fromarray(im))
-                
-                # Try exact match first
-                if str(hash_val) in hash_to_district:
-                    district = hash_to_district[str(hash_val)]
-                    exact_matches += 1
-                else:
-                    # Try fuzzy match
-                    best_hash, distance = find_closest_hash(hash_val, hash_to_district, max_hash_distance)
-                    if best_hash:
-                        district = hash_to_district[best_hash]
-                        fuzzy_matches += 1
-                    else:
-                        district = None
-                        unknown += 1
-                
-                # Map district to zone
-                if district:
-                    if district in district_to_zone:
-                        zone = district_to_zone[district]
-                    else:
-                        # District found but not in our zone mapping (e.g., California district when processing Karnataka)
-                        zone = 'UNKNOWN'
-                else:
-                    zone = 'UNKNOWN'
-                
-                # Write to CSV
-                f.write(f'{filename},{zone}\n')
-                zone_counts[zone] = zone_counts.get(zone, 0) + 1
-                
-            except Exception as e:
-                print(f"Error processing {filename}: {e}")
-                f.write(f'{filename},ERROR\n')
-                zone_counts['ERROR'] = zone_counts.get('ERROR', 0) + 1
+            # Update statistics
+            if match_type == 'exact':
+                exact_matches += 1
+            elif match_type == 'fuzzy':
+                fuzzy_matches += 1
+            elif match_type == 'unknown':
+                unknown += 1
+            elif match_type == 'error':
+                errors += 1
             
-            if total % 500 == 0:
-                print(f"  Processed {total} tiles...")
+            zone_counts[zone] = zone_counts.get(zone, 0) + 1
+            
+            if (i + 1) % 500 == 0:
+                print(f"  Processed {i + 1}/{total} tiles...")
+    
+    # Write results to CSV
+    print(f"\nWriting results to {output_csv}...")
+    with open(output_csv, 'w') as f:
+        f.write('filename,zone\n')
+        for filename, zone in sorted(results):
+            f.write(f'{filename},{zone}\n')
     
     # Print statistics
     print(f"\n{'='*60}")
@@ -298,6 +349,8 @@ def classify_tiles(tiles_dir, hash_to_district, district_to_zone, output_csv,
     print(f"Exact hash matches: {exact_matches}")
     print(f"Fuzzy hash matches: {fuzzy_matches}")
     print(f"Unknown/no match: {unknown}")
+    if errors > 0:
+        print(f"Errors: {errors}")
     print(f"\nZone distribution:")
     for zone in sorted(zone_counts.keys()):
         print(f"  {zone}: {zone_counts[zone]}")
@@ -495,7 +548,7 @@ Available states:
         black_threshold=args.black_threshold
     )
     
-    # Phase 2: Classify tiles
+    # Phase 2: Classify tiles (automatically uses all available CPUs)
     stats = classify_tiles(
         tiles_dir=args.tiles_dir,
         hash_to_district=hash_to_district,
