@@ -2,6 +2,9 @@
 """
 Find Zones Script
 Maps 400x400 TIF images to agroclimatic zones using hash matching with georeferenced source files.
+
+Handles mixed directories: Images with geolocations outside the shapefile boundaries are automatically
+ignored (e.g., California images in a Karnataka+California mixed directory).
 """
 
 import os
@@ -120,6 +123,8 @@ def build_hash_to_district_mapping(source_dir, shapefile_path, district_key='Dis
     hash_to_district = {}
     total_patches = 0
     valid_patches = 0
+    skipped_black = 0
+    skipped_outside = 0
     
     for i, batch in enumerate(dataloader):
         unbinded = unbind_samples(batch)
@@ -133,26 +138,35 @@ def build_hash_to_district_mapping(source_dir, shapefile_path, district_key='Dis
         numzero = (im == 0).sum().item()
         ratio = numzero / numpixels
         
-        if ratio < black_threshold:
-            # Get center point from bounds
-            bds = sample['bounds']
-            pt = Point((bds.minx + bds.maxx) / 2, (bds.miny + bds.maxy) / 2)
-            
-            # Find district
-            district = get_region(shapefile_data, district_key, pt)
-            
-            if district != 'UNKNOWN':
-                # Compute hash
-                image = im[0:3].permute(1, 2, 0).numpy().astype('uint8')
-                hash_val = imagehash.dhash(Image.fromarray(image))
-                hash_to_district[str(hash_val)] = district
-                valid_patches += 1
+        if ratio >= black_threshold:
+            skipped_black += 1
+            continue
+        
+        # Get center point from bounds
+        bds = sample['bounds']
+        pt = Point((bds.minx + bds.maxx) / 2, (bds.miny + bds.maxy) / 2)
+        
+        # Find district
+        district = get_region(shapefile_data, district_key, pt)
+        
+        if district == 'UNKNOWN':
+            # Point is outside shapefile boundaries (e.g., California image when processing Karnataka)
+            skipped_outside += 1
+            continue
+        
+        # Compute hash and store mapping
+        image = im[0:3].permute(1, 2, 0).numpy().astype('uint8')
+        hash_val = imagehash.dhash(Image.fromarray(image))
+        hash_to_district[str(hash_val)] = district
+        valid_patches += 1
         
         if (i + 1) % 100 == 0:
             print(f"  Processed {i + 1} patches, {valid_patches} valid mappings...")
     
     print(f"\nTotal patches sampled: {total_patches}")
     print(f"Valid hash→district mappings: {len(hash_to_district)}")
+    print(f"Skipped (too many black pixels): {skipped_black}")
+    print(f"Skipped (outside shapefile boundaries): {skipped_outside}")
     print(f"Sample mappings: {dict(list(hash_to_district.items())[:5])}")
     
     return hash_to_district
@@ -215,8 +229,12 @@ def classify_tiles(tiles_dir, hash_to_district, district_to_zone, output_csv,
                         unknown += 1
                 
                 # Map district to zone
-                if district and district in district_to_zone:
-                    zone = district_to_zone[district]
+                if district:
+                    if district in district_to_zone:
+                        zone = district_to_zone[district]
+                    else:
+                        # District found but not in our zone mapping (e.g., California district when processing Karnataka)
+                        zone = 'UNKNOWN'
                 else:
                     zone = 'UNKNOWN'
                 
