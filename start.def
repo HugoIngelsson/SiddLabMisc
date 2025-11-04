@@ -2,98 +2,32 @@ Bootstrap: docker
 From: continuumio/miniconda3
 
 %post
-    # Install mamba for faster, more memory-efficient solving
-    conda install -n base conda-libmamba-solver -y
-    conda config --set solver libmamba
+    conda init
+    # Create envs and install packages
+    conda create --name myenv python=3.11 pandas numpy
     
-    # Create environment with Python 3.9 and essential packages in one go
-    # This avoids multiple dependency resolutions
-    conda create --name zones_env python=3.9 numpy -y
-    
-    # Activate environment
     . /opt/conda/etc/profile.d/conda.sh
-    conda activate zones_env
-    
-    # Install packages one at a time with minimal dependencies
-    echo "Installing libspatialindex..."
+    conda activate myenv
+    conda install pip
     conda install -c conda-forge libspatialindex --no-update-deps -y
-    
-    echo "Installing pandas..."
-    conda install -c conda-forge pandas --no-update-deps -y
-    
-    echo "Installing matplotlib..."
-    conda install -c conda-forge matplotlib --no-update-deps -y
-    
-    echo "Installing shapely..."
     conda install -c conda-forge shapely --no-update-deps -y
-    
-    echo "Installing rtree..."
     conda install -c conda-forge rtree --no-update-deps -y
-    
-    echo "Installing GDAL dependencies..."
     conda install -c conda-forge gdal --no-update-deps -y
-    
-    echo "Installing rasterio..."
     conda install -c conda-forge rasterio --no-update-deps -y
-    
-    echo "Installing fiona..."
     conda install -c conda-forge fiona --no-update-deps -y
-    
-    echo "Installing pyproj..."
     conda install -c conda-forge pyproj --no-update-deps -y
-    
-    echo "Installing geopandas..."
     conda install -c conda-forge geopandas --no-update-deps -y
-    
-    echo "Installing PyTorch..."
     conda install pytorch torchvision cpuonly -c pytorch --no-update-deps -y
-    
-    echo "Installing pip packages..."
+
     pip install --no-cache-dir torchgeo
     pip install --no-cache-dir imagehash
     pip install --no-cache-dir opencv-python-headless
     pip install --no-cache-dir Pillow
     
-    # Clean up to reduce image size
-    conda clean -afy
-    pip cache purge
-    
-    # Set up environment for Singularity/Apptainer
+    # some special environment things for singularity
     echo ". /opt/conda/etc/profile.d/conda.sh" >> $SINGULARITY_ENVIRONMENT
-    echo "conda activate zones_env" >> $SINGULARITY_ENVIRONMENT
-
-%files
-    # Copy find_zones.py into the container
-    find_zones.py /opt/find_zones.py
+    echo "conda activate myenv" >> $SINGULARITY_ENVIRONMENT
 
 %runscript
-    # Run find_zones.py with arguments passed from command line
-    exec python /opt/find_zones.py "$@"
-
-%help
-    This container runs the find_zones.py script for zone classification.
-    
-    Usage:
-        apptainer run zones.sif --state karnataka --source-dir /path/to/source --shapefile /path/to/shapefile.shp --tiles-dir /path/to/tiles --output output.csv
-    
-    Required arguments:
-        --state              State to process (karnataka or rajasthan)
-        --source-dir         Directory with georeferenced source GeoTIFF files
-        --shapefile          Path to shapefile with district boundaries
-        --tiles-dir          Directory with 400x400 TIF tiles to classify
-        --output             Output CSV file path
-    
-    Optional arguments:
-        --district-key       Column name in shapefile for districts (default: District)
-        --target-crs         Target CRS EPSG code (default: 32643)
-        --patch-size         Patch size for sampling (default: 400)
-        --stride             Stride for sampling (default: 400)
-        --max-hash-distance  Max Hamming distance for fuzzy matching (default: 12)
-    
-    Example:
-        apptainer run zones.sif \
-            --state karnataka \
-            --source-dir ./source_geotiffs \
-            --shapefile ./districts.shp \
-            --tiles-dir ./tiles \
-            --output zones.csv 
+    echo "Running Python script"
+    python find_zones.py --state karnataka --source-dir ../tifs_for_labeling/karnataka_top_10_tifs/ --shapefile ./district_shapefiles/2011_Dist.shp --tiles-dir ../new_karnataka_california_cvat/kejri_trees_karnataka/images/default/ --output karnataka_final_zones.csv
