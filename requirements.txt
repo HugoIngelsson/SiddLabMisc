@@ -21,6 +21,8 @@ geopandas>=0.10.0
 rasterio>=1.2.0
 shapely>=1.7.0
 tifffile>=2021.7.2
+rtree>=0.9.7
+libspatialindex>=1.9.3
 
 # Data processing and utilities
 tqdm>=4.62.0
@@ -36,4 +38,4 @@ imagehash>=4.2.0
 earthengine-api>=0.1.0
 
 # Additional utilities
-contextlib>=1.0.0
+argparse
