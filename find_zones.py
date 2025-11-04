@@ -378,26 +378,26 @@ Available states:
     
     # Define zone mappings
     KARNATAKA_ZONES = {
-        'SHIVAMOGGA': 'SOUTHERN TRANSITION',
-        'UTTARA  KANNADA': 'HILL',
-        'DAVANGERE': 'CENTRAL DRY',
-        'CHITRADURGA': 'CENTRAL DRY',
-        'BALLARI': 'NORTH EAST DRY',
-        'DHARWAD': 'WESTERN TRANSITION',
-        'GADAG': 'NORTHERN DRY',
-        'KOPPAL': 'NORTH EAST DRY',
-        'RAICHUR': 'NORTH EAST DRY',
-        'YADGIR': 'NORTH EAST DRY',
-        'KODAGU': 'SOUTHERN DRY',
-        'MANDYA': 'SOUTHERN DRY',
-        'RAMANAGARAM': 'EASTERN DRY',
-        'DAKSHINA  KANNADA': 'COASTAL',
-        'HASSAN': 'SOUTHERN TRANSITION',
-        'KOLAR': 'EASTERN DRY',
-        'BENGALURU RURAL': 'EASTERN DRY',
-        'UDUPI': 'COASTAL',
-        'TUMAKURU': 'CENTRAL DRY',
-        'CHIKKABALLAPURA': 'EASTERN DRY'
+        'Shimoga': 'SOUTHERN TRANSITION',
+        'Uttara Kannada': 'HILL',
+        'Davanagere': 'CENTRAL DRY',
+        'Chitradurga': 'CENTRAL DRY',
+        'Bellary': 'NORTH EAST DRY',
+        'Dharwad': 'WESTERN TRANSITION',
+        'Gadag': 'NORTHERN DRY',
+        'Koppal': 'NORTH EAST DRY',
+        'Raichur': 'NORTH EAST DRY',
+        'Yadgir': 'NORTH EAST DRY',
+        'Kodagu': 'SOUTHERN DRY',
+        'Mandya': 'SOUTHERN DRY',
+        'Ramanagara': 'EASTERN DRY',
+        'Dakshina Kannada': 'COASTAL',
+        'Hassan': 'SOUTHERN TRANSITION',
+        'Kolar': 'EASTERN DRY',
+        'Bangalore Rural': 'EASTERN DRY',
+        'Udupi': 'COASTAL',
+        'Tumkur': 'CENTRAL DRY',
+        'Chikkaballapura': 'EASTERN DRY'
     }
     
     RAJASTHAN_ZONES = {
@@ -507,7 +507,6 @@ Available states:
     print(f"\n{'='*60}")
     print("COMPLETED SUCCESSFULLY")
     print(f"{'='*60}\n")
-
 
 if __name__ == "__main__":
     main()
